@@ -2,6 +2,8 @@
 
 Fetch theaters near postal code and movies on sale at each.
 
+Uses Fandango's RSS moviesnearme feed. E.g. http://www.fandango.com/rss/moviesnearme_10023.rss
+
 ## Usage
 
 `Fandango.movies_near(73142)` returns an array of hashes.
@@ -11,6 +13,7 @@ The movies are an array of hashes. Each hash contains title and Fandango's id.
 
 ### Example output format
 
+```
 [
     [ 0] {
         :theater => {
@@ -29,6 +32,7 @@ The movies are an array of hashes. Each hash contains title and Fandango's id.
     },
     # more hashes...
 ]
+```
 
 ## Compatibility
 
