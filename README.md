@@ -1,5 +1,7 @@
 # Fandango API
 
+[travis]: http://travis-ci.org/ordinaryzelig/fandango
+
 Fetch theaters near postal code and movies on sale at each.
 
 Uses Fandango's RSS moviesnearme feed. E.g. http://www.fandango.com/rss/moviesnearme_10023.rss
@@ -33,10 +35,6 @@ The movies are an array of hashes. Each hash contains title and Fandango's id.
     # more hashes...
 ]
 ```
-
-## Compatibility
-
-Developed with Ruby 1.9.2-p290. Won't work in Ruby 1.8.
 
 ## Todo
 
