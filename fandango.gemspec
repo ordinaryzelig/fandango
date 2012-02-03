@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency 'activesupport', '> 3.0.8', '< 3.2.0'
-  # feedzirra dependency declared in Gemfile.
+  s.add_runtime_dependency 'feedzirra', '0.1.1'
 
   s.add_development_dependency 'awesome_print'
   s.add_development_dependency 'mocha', '0.10.3'
