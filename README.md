@@ -1,6 +1,4 @@
-# Fandango API
-
-[travis]: http://travis-ci.org/ordinaryzelig/fandango
+# Fandango API [![Build Status](https://secure.travis-ci.org/ordinaryzelig/fandango.png?branch=master)](http://travis-ci.org/ordinaryzelig/fandango)
 
 Fetch theaters near postal code and movies on sale at each.
 
