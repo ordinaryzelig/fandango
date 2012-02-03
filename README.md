@@ -1,1 +1,41 @@
 # Fandango API
+
+Fetch theaters near postal code and movies on sale at each.
+
+## Usage
+
+`Fandango.movies_near(73142)` returns an array of hashes.
+Each hash has 2 items: theater info and movies on sale at that theater.
+A theater is a hash of data containing: name, Fandango's theater id, address, and postal code.
+The movies are an array of hashes. Each hash contains title and Fandango's id.
+
+### Example output format
+
+[
+    [ 0] {
+        :theater => {
+                   :name => "AMC",
+                     :id => "abcde",
+                :address => "123 Baker St., New York, NY 10001",
+            :postal_code => "10001"
+        },
+         :movies => [
+            [0] {
+                :title => "Sherlock Holmes",
+                   :id => "123456"
+            },
+            # more movies...
+        ]
+    },
+    # more hashes...
+]
+
+## Compatibility
+
+Developed with Ruby 1.9.2-p290. Won't work in Ruby 1.8.
+
+## Todo
+
+* There's only 1 test at the moment. It's small enough. Later, may want to add more broken down tests.
+* Support for non-US postal codes
+  * parse non-US postal codes (currently only parses digits -- i.e. US zipcodes).

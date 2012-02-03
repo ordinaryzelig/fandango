@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Fandango::VERSION
   s.authors     = ["Jared Ning"]
   s.email       = ["jared@redningja.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/ordinaryzelig/fandango"
+  s.summary     = "Fandango API"
+  s.description = "Find theaters and movies on sale near a given postal code"
 
   s.rubyforge_project = "fandango"
 
@@ -18,7 +18,10 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_runtime_dependency 'activesupport', '3.1.3' # feeedzirra doesn't work with 3.2.
+  s.add_runtime_dependency 'feedzirra', '0.1.1'
+
+  s.add_development_dependency 'awesome_print'
+  s.add_development_dependency 'mocha', '0.10.3'
+  s.add_development_dependency 'minitest', '2.11.1'
 end
