@@ -28,14 +28,14 @@ Gem::Specification.new do |s|
   # s.add_runtime_dependency 'feedzirra', '0.1.2'
 
   # Following dependencies copied from feedzirra's gemspec.
-  s.add_runtime_dependency 'nokogiri',      '>= 1.4.4'
-  s.add_runtime_dependency 'sax-machine',   '~> 0.1.0'
-  s.add_runtime_dependency 'curb',          '~> 0.7.15'
-  s.add_runtime_dependency 'builder',       '>= 2.1.2'
-  s.add_runtime_dependency 'loofah',        '~> 1.2.0'
-  s.add_runtime_dependency 'rdoc',          '~> 3.8'
-  s.add_runtime_dependency 'rake',          '>= 0.8.7'
-  s.add_runtime_dependency 'i18n',          '>= 0.5.0'
+  s.add_runtime_dependency 'nokogiri',      ['>= 1.4.4']
+  s.add_runtime_dependency 'sax-machine',   ['~> 0.1.0']
+  s.add_runtime_dependency 'curb',          ['~> 0.7.15']
+  s.add_runtime_dependency 'builder',       ['>= 2.1.2']
+  s.add_runtime_dependency 'loofah',        ['~> 1.2.0']
+  s.add_runtime_dependency 'rdoc',          ['~> 3.8']
+  s.add_runtime_dependency 'rake',          ['>= 0.8.7']
+  s.add_runtime_dependency 'i18n',          ['>= 0.5.0']
 
   s.add_development_dependency 'awesome_print'
   s.add_development_dependency 'mocha', '0.10.3'
