@@ -21,6 +21,10 @@ describe Fandango do
       movies_atts.first[:title].must_equal 'Happy Feet Two'
     end
 
+    it 'raises error if postal code nil' do
+      proc { Fandango.movies_near(nil) }.must_raise(ArgumentError)
+    end
+
   end
 
 end

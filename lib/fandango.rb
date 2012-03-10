@@ -8,6 +8,7 @@ module Fandango
   class << self
 
     def movies_near(postal_code)
+      raise ArgumentError, "postal code cannot be blank" if postal_code.nil? || postal_code == ''
       feed = fetch_and_parse(postal_code)
       feed.entries.map do |entry|
         parser = Parser.new(entry)
