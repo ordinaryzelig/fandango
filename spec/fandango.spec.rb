@@ -25,6 +25,11 @@ describe Fandango do
       proc { Fandango.movies_near(nil) }.must_raise(ArgumentError)
     end
 
+    it 'raises BadResponse unless feedzirra feed responds to entries' do
+      Feedzirra::Feed.expects(:fetch_and_parse).returns(0)
+      proc { Fandango.movies_near(123) }.must_raise(Fandango::BadResponse)
+    end
+
   end
 
 end

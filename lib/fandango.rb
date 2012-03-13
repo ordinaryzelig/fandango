@@ -22,9 +22,17 @@ module Fandango
     private
 
     def fetch_and_parse(postal_code)
-      Feedzirra::Feed.fetch_and_parse("http://www.fandango.com/rss/moviesnearme_#{postal_code}.rss")
+      feed = Feedzirra::Feed.fetch_and_parse("http://www.fandango.com/rss/moviesnearme_#{postal_code}.rss")
+      raise BadResponse.new(feed) unless feed.respond_to?(:entries)
+      feed
     end
 
+  end
+
+  class BadResponse < StandardError
+    def initialize(response)
+      super "Bad response: #{response.inspect}"
+    end
   end
 
 end
