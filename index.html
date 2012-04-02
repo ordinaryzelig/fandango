@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fandango by ordinaryzelig</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Fandango</h1>
+<p>fandango API</p>
+        <p class="view"><a href="https://github.com/ordinaryzelig/fandango">View the Project on GitHub <small>ordinaryzelig/fandango</small></a></p>
+        <ul>
+          <li><a href="https://github.com/ordinaryzelig/fandango/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ordinaryzelig/fandango/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ordinaryzelig/fandango">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Fandango API</h1>
+
+<p><a href="http://travis-ci.org/ordinaryzelig/fandango"><img src="https://secure.travis-ci.org/ordinaryzelig/fandango.png?branch=master" alt="Build Status"></a></p>
+
+<p>Fetch theaters near postal code and movies on sale at each.</p>
+
+<p>Uses Fandango's RSS moviesnearme feed. E.g. <a href="http://www.fandango.com/rss/moviesnearme_10023.rss">http://www.fandango.com/rss/moviesnearme_10023.rss</a></p>
+
+<h2>Usage</h2>
+
+<p><code>Fandango.movies_near(73142)</code> returns an array of hashes.
+Each hash has 2 items: theater info and movies on sale at that theater.
+A theater is a hash of data containing: name, Fandango's theater id, address, and postal code.
+The movies are an array of hashes. Each hash contains title and Fandango's id.</p>
+
+<h3>Example output format</h3>
+
+<pre><code>[
+    [ 0] {
+        :theater =&gt; {
+                   :name =&gt; "AMC",
+                     :id =&gt; "abcde",
+                :address =&gt; "123 Baker St., New York, NY 10001",
+            :postal_code =&gt; "10001"
+        },
+         :movies =&gt; [
+            [0] {
+                :title =&gt; "Sherlock Holmes",
+                   :id =&gt; "123456"
+            },
+            # more movies...
+        ]
+    },
+    # more hashes...
+]
+</code></pre>
+
+<h2>Todo</h2>
+
+<ul>
+<li>There's only 1 test at the moment. It's small enough. Later, may want to add more broken down tests.</li>
+<li>Support for non-US postal codes
+
+<ul>
+<li>parse non-US postal codes (currently only parses digits -- i.e. US zipcodes).</li>
+</ul>
+</li>
+</ul>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/ordinaryzelig">ordinaryzelig</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
