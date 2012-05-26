@@ -22,7 +22,8 @@ module Fandango
     private
 
     def fetch_and_parse(postal_code)
-      feed = Feedzirra::Feed.fetch_and_parse("http://www.fandango.com/rss/moviesnearme_#{postal_code}.rss")
+      cleaned_postal_code = postal_code.to_s.gsub(' ', '')
+      feed = Feedzirra::Feed.fetch_and_parse("http://www.fandango.com/rss/moviesnearme_#{cleaned_postal_code}.rss")
       raise BadResponse.new(feed) unless feed.respond_to?(:entries)
       feed
     end

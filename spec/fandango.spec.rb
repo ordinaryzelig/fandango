@@ -30,6 +30,14 @@ describe Fandango do
       proc { Fandango.movies_near(123) }.must_raise(Fandango::BadResponse)
     end
 
+    it 'removes spaces from postal code' do
+      feed = Object.new
+      feed.stubs(:entries).returns([])
+      url = 'http://www.fandango.com/rss/moviesnearme_ABC123.rss'
+      Feedzirra::Feed.expects(:fetch_and_parse).with(url).returns(feed)
+      Fandango.send(:fetch_and_parse, 'ABC 123')
+    end
+
   end
 
 end
