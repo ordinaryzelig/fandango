@@ -33,7 +33,3 @@ The movies are an array of hashes. Each hash contains title and Fandango's id.
     # more hashes...
 ]
 ```
-
-## Todo
-
-* Remove Feezirra. For what we're doing, it's not worth the dependency. Just make request and parse ourselves.
