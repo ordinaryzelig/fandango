@@ -1,24 +1,39 @@
-class Fandango::Parser
+require 'fandango/movie'
+require 'fandango/theater'
 
-  # Cache entry.
-  # Define entry.summary_doc as Nokogiri HTML document.
-  # Both theater and movie parsers use summary, and we only want to use Nokogiri once per entry.
-  def initialize(entry)
-    @entry = entry
-    @entry.define_singleton_method(:summary_doc) do
-      @summary_doc ||= Nokogiri.HTML(summary)
+module Fandango
+  class Parser
+
+    class << self
+
+      def parse(source)
+        parser = new(source)
+        parser.parse
+      end
+
+      # Description content is wrapped in CDATA.
+      # Parse it and return a parsed Nokogiri node.
+      def parse_description(item_node)
+        cdata = item_node.at_css('description')
+        Nokogiri::HTML(cdata.content)
+      end
+
     end
-  end
 
-  def parse_theater
-    Theater.new(@entry).parse
-  end
+    def initialize(source)
+      @source = source
+    end
 
-  def parse_movies
-    Movie.new(@entry).parse
-  end
+    def parse
+      @doc = Nokogiri.XML(@source)
+      @doc.css('item').map do |item_node|
+        hash = {}
+        description_node = self.class.parse_description(item_node)
+        hash[:theater] = Theater.parse(item_node, description_node)
+        hash[:movies] = Movie.parse(description_node)
+        hash
+      end
+    end
 
+  end
 end
-
-require 'fandango/parsers/theater'
-require 'fandango/parsers/movie'

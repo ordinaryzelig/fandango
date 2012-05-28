@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.fandango.com/rss/moviesnearme_123BADZIP.rss
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - public, max-age=86400
+      content-type:
+      - text/xml; charset=utf-8
+      expires:
+      - Tue, 29 May 2012 16:40:57 GMT
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+      content-length:
+      - '617'
+      date:
+      - Mon, 28 May 2012 16:40:58 GMT
+      connection:
+      - keep-alive
+      set-cookie:
+      - NSC_GBOE_216.178.160.43_80_DT1=ffffffff020ccfa545525d5f4f58455e445a4a423660;expires=Mon,
+        28-May-2012 17:00:58 GMT;path=/;httponly
+    body:
+      encoding: US-ASCII
+      string: <rss version="2.0"><channel><title>Fandango.com Movies Near Me</title><link><![CDATA[http://www.fandango.com/movietimes?wssaffid=11836&wssac=123]]></link><description>Review
+        movie listings for local theaters near you on Fandango.com</description><language>en-us</language><copyright>Copyright
+        2012 Fandango</copyright><pubDate>Mon, 28 May 2012 16:40:57 GMT</pubDate><ttl>1440</ttl><image><url>http://images.fandango.com/r87.6/images/global/fandango_rss_logo.gif</url><title>Fandango.com
+        Movies Near Me</title><link><![CDATA[http://www.fandango.com/movietimes?wssaffid=11836&wssac=123]]></link></image></channel></rss>
+    http_version: '1.1'
+  recorded_at: Mon, 28 May 2012 16:40:58 GMT
+recorded_with: VCR 2.1.1

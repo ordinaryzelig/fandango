@@ -1,0 +1,349 @@
+---
+- :theater:
+    :name: AMC Quail Springs Mall 24
+    :id: aaktw
+    :address: 2501 West Memorial Oklahoma City, OK 73134
+    :postal_code: '73134'
+  :movies:
+  - :title: ! 'Abraham Lincoln: Vampire Hunter'
+    :id: '141897'
+  - :title: The Amazing Spider-Man 3D
+    :id: '141122'
+  - :title: The Amazing Spider-Man
+    :id: '126975'
+  - :title: ! 'The Amazing Spider-Man: An IMAX 3D Experience'
+    :id: '153829'
+  - :title: Battleship
+    :id: '130096'
+  - :title: The Best Exotic Marigold Hotel
+    :id: '147777'
+  - :title: Brave
+    :id: '136016'
+  - :title: Bully
+    :id: '145958'
+  - :title: Chernobyl Diaries
+    :id: '152960'
+  - :title: Chimpanzee
+    :id: '116882'
+  - :title: Dark Shadows
+    :id: '147176'
+  - :title: The Dictator
+    :id: '145763'
+  - :title: Happiest Baby and Happiest Toddler Live With Dr. Karp
+    :id: '154921'
+  - :title: The Hunger Games
+    :id: '136944'
+  - :title: The Lucky One
+    :id: '145457'
+  - :title: ! 'Madagascar 3: Europe''s Most Wanted 3D'
+    :id: '151457'
+  - :title: Marvel's The Avengers
+    :id: '30154'
+  - :title: Marvel's The Avengers 3D
+    :id: '151545'
+  - :title: Men in Black III
+    :id: '135737'
+  - :title: Men in Black III 3D
+    :id: '147264'
+  - :title: ! 'Men in Black III: An IMAX 3D Experience'
+    :id: '148659'
+  - :title: ! 'National Theater Live: Frankenstein (Original Casting)'
+    :id: '137637'
+  - :title: ! 'National Theater Live: Frankenstein (Reverse Casting)'
+    :id: '142883'
+  - :title: The Pirates! Band of Misfits
+    :id: '146664'
+  - :title: Prometheus 3D
+    :id: '152981'
+  - :title: ! 'Prometheus: An IMAX 3D Experience'
+    :id: '153676'
+  - :title: Ratatouille
+    :id: '98260'
+  - :title: Snow White and the Huntsman
+    :id: '141533'
+  - :title: Ted
+    :id: '136691'
+  - :title: The Tempest Starring Christopher Plummer
+    :id: '155187'
+  - :title: That's My Boy
+    :id: '149081'
+  - :title: Think Like a Man
+    :id: '147732'
+  - :title: Toy Story 3
+    :id: '124782'
+  - :title: Up
+    :id: '114055'
+  - :title: WALL-E
+    :id: '102903'
+  - :title: What to Expect When You're Expecting
+    :id: '120322'
+- :theater:
+    :name: Northpark 7
+    :id: aaicu
+    :address: 12100 N. May Ave Oklahoma City, OK 73120
+    :postal_code: '73120'
+  :movies:
+  - :title: 21 Jump Street
+    :id: '131465'
+  - :title: ! 'Alvin and the Chipmunks: Chipwrecked'
+    :id: '141127'
+  - :title: American Reunion
+    :id: '145402'
+  - :title: Dr. Seuss' The Lorax
+    :id: '51897'
+  - :title: Dr. Seuss' The Lorax 3D
+    :id: '148858'
+  - :title: John Carter
+    :id: '130633'
+  - :title: John Carter 3D
+    :id: '147144'
+  - :title: ! 'Journey 2: The Mysterious Island'
+    :id: '135727'
+  - :title: Mirror Mirror
+    :id: '143278'
+  - :title: Wrath of the Titans
+    :id: '140654'
+- :theater:
+    :name: Dickinson Penn Square 10
+    :id: aagtg
+    :address: 1901 NW Expressway Oklahoma City, OK 73118
+    :postal_code: '73118'
+  :movies:
+  - :title: Battleship
+    :id: '130096'
+  - :title: Chernobyl Diaries
+    :id: '152960'
+  - :title: Dark Shadows
+    :id: '147176'
+  - :title: The Dictator
+    :id: '145763'
+  - :title: Marvel's The Avengers
+    :id: '30154'
+  - :title: Marvel's The Avengers 3D
+    :id: '151545'
+  - :title: Men in Black III
+    :id: '135737'
+  - :title: Men in Black III 3D
+    :id: '147264'
+  - :title: What to Expect When You're Expecting
+    :id: '120322'
+- :theater:
+    :name: B&B Theatres Windsor 10
+    :id: aavud
+    :address: 4623 A. N.W. 23rd St. Oklahoma City, OK 73127
+    :postal_code: '73127'
+  :movies:
+  - :title: Battleship
+    :id: '130096'
+  - :title: Chernobyl Diaries
+    :id: '152960'
+  - :title: Dark Shadows
+    :id: '147176'
+  - :title: The Dictator
+    :id: '145763'
+  - :title: Marvel's The Avengers
+    :id: '30154'
+  - :title: Marvel's The Avengers 3D
+    :id: '151545'
+  - :title: Men in Black III
+    :id: '135737'
+  - :title: Men in Black III 3D
+    :id: '147264'
+  - :title: What to Expect When You're Expecting
+    :id: '120322'
+- :theater:
+    :name: Kickingbird Cinema
+    :id: aaenx
+    :address: 1225 East Danforth Rd Edmond, OK 73083
+    :postal_code: '73083'
+  :movies: []
+- :theater:
+    :name: Cinemark Tinseltown
+    :id: aaitg
+    :address: 6001 Martin Luther King Blvd. Oklahoma City, OK 73111
+    :postal_code: '73111'
+  :movies:
+  - :title: The Amazing Spider-Man 3D
+    :id: '141122'
+  - :title: Anna Bolena Met Summer Encore
+    :id: '154543'
+  - :title: Battleship
+    :id: '130096'
+  - :title: Bernie
+    :id: '149564'
+  - :title: The Best Exotic Marigold Hotel
+    :id: '147777'
+  - :title: Cabaret
+    :id: '104412'
+  - :title: Chernobyl Diaries
+    :id: '152960'
+  - :title: Citizen Kane
+    :id: '1439'
+  - :title: A Clockwork Orange
+    :id: '370'
+  - :title: Cool Hand Luke
+    :id: '15758'
+  - :title: Cowgirls n' Angels
+    :id: '154322'
+  - :title: Crooked Arrows
+    :id: '154422'
+  - :title: Dark Shadows
+    :id: '147176'
+  - :title: DCI 2012 Tour Premiere
+    :id: '154934'
+  - :title: Der Rosenkavalier Met Summer Encore
+    :id: '154548'
+  - :title: ! 'Diary of a Wimpy Kid: Rodrick Rules'
+    :id: '139535'
+  - :title: The Dictator
+    :id: '145763'
+  - :title: Dolphin Tale
+    :id: '140092'
+  - :title: Don Giovanni Met Summer Encore
+    :id: '154545'
+  - :title: The Exorcist (1973)
+    :id: '90729'
+  - :title: Happiest Baby and Happiest Toddler Live With Dr. Karp
+    :id: '154921'
+  - :title: Happy Feet Two
+    :id: '149198'
+  - :title: The Hunger Games
+    :id: '136944'
+  - :title: ! 'Journey 2: The Mysterious Island'
+    :id: '135727'
+  - :title: Kung Fu Panda 2
+    :id: '119854'
+  - :title: Le Comte Ory Met Summer Encore
+    :id: '154544'
+  - :title: Les Contes d’Hoffmann Met Summer Encore
+    :id: '154546'
+  - :title: Linkin Park Living Things Concert Event
+    :id: '156066'
+  - :title: Lucia Di Lammermoor Met Summer Encore
+    :id: '154547'
+  - :title: ! 'Madagascar 3: Europe''s Most Wanted 3D'
+    :id: '151457'
+  - :title: Marvel's The Avengers
+    :id: '30154'
+  - :title: Marvel's The Avengers 3D
+    :id: '151545'
+  - :title: Men in Black III
+    :id: '135737'
+  - :title: Men in Black III 3D
+    :id: '147264'
+  - :title: ! 'National Theater Live: Frankenstein (Original Casting)'
+    :id: '137637'
+  - :title: ! 'National Theater Live: Frankenstein (Reverse Casting)'
+    :id: '142883'
+  - :title: North by Northwest
+    :id: '631'
+  - :title: Prometheus 3D
+    :id: '152981'
+  - :title: Puss in Boots
+    :id: '131567'
+  - :title: Rio The Movie
+    :id: '131571'
+  - :title: The Searchers
+    :id: '1926'
+  - :title: Snow White and the Huntsman
+    :id: '141533'
+  - :title: ! 'Star Trek: The Next Generation 25th Anniversary Event'
+    :id: '155848'
+  - :title: TCM Presents Singin' in the Rain 60th Anniversary Event
+    :id: '155652'
+  - :title: The Tempest Starring Christopher Plummer
+    :id: '155187'
+  - :title: That's Entertainment!
+    :id: '95288'
+  - :title: Think Like a Man
+    :id: '147732'
+  - :title: What to Expect When You're Expecting
+    :id: '120322'
+  - :title: Winnie the Pooh
+    :id: '141120'
+  - :title: Yogi Bear
+    :id: '32983'
+- :theater:
+    :name: Yukon Movies 5
+    :id: aaict
+    :address: 1219 Garth Brooks Rd. Yukon, OK 73099
+    :postal_code: '73099'
+  :movies:
+  - :title: Battleship
+    :id: '130096'
+  - :title: Chernobyl Diaries
+    :id: '152960'
+  - :title: The Dictator
+    :id: '145763'
+  - :title: What to Expect When You're Expecting
+    :id: '120322'
+- :theater:
+    :name: OmniDome Theatre
+    :id: aaopy
+    :address: 2100 NE 52nd Street Oklahoma City, OK 73111
+    :postal_code: '73111'
+  :movies:
+  - :title: Tornado Alley
+    :id: '140948'
+- :theater:
+    :name: Dickinson West End Pointe 8 Theatre
+    :id: aauol
+    :address: 12825 NW 10th Yukon, OK 73099
+    :postal_code: '73099'
+  :movies:
+  - :title: 21 Jump Street
+    :id: '131465'
+  - :title: Dark Shadows
+    :id: '147176'
+  - :title: The Hunger Games
+    :id: '136944'
+  - :title: Marvel's The Avengers
+    :id: '30154'
+  - :title: Marvel's The Avengers 3D
+    :id: '151545'
+  - :title: Men in Black III
+    :id: '135737'
+  - :title: Men in Black III 3D
+    :id: '147264'
+  - :title: Mirror Mirror
+    :id: '143278'
+  - :title: The Pirates! Band of Misfits
+    :id: '146664'
+- :theater:
+    :name: Harkins Cine Capri Bricktown
+    :id: aaswz
+    :address: 150 East Reno Ave. Oklahoma City, OK 73104
+    :postal_code: '73104'
+  :movies:
+  - :title: Battleship
+    :id: '130096'
+  - :title: The Best Exotic Marigold Hotel
+    :id: '147777'
+  - :title: Chernobyl Diaries
+    :id: '152960'
+  - :title: Cowgirls n' Angels
+    :id: '154322'
+  - :title: Dark Shadows
+    :id: '147176'
+  - :title: The Dictator
+    :id: '145763'
+  - :title: Marvel's The Avengers
+    :id: '30154'
+  - :title: Marvel's The Avengers 3D
+    :id: '151545'
+  - :title: Men in Black III
+    :id: '135737'
+  - :title: Men in Black III 3D
+    :id: '147264'
+  - :title: Snow White and the Huntsman
+    :id: '141533'
+  - :title: Think Like a Man
+    :id: '147732'
+  - :title: What to Expect When You're Expecting
+    :id: '120322'
+- :theater:
+    :name: AAFES Base Theatre
+    :id: aaqbg
+    :address: 3000 S. Douglas Ave. Oklahoma City, OK 73109
+    :postal_code: '73109'
+  :movies: []

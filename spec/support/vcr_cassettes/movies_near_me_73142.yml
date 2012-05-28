@@ -1,0 +1,247 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.fandango.com/rss/moviesnearme_73142.rss
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - public, max-age=86400
+      content-type:
+      - text/xml; charset=utf-8
+      expires:
+      - Tue, 29 May 2012 14:16:27 GMT
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 4.0.30319
+      x-powered-by:
+      - ASP.NET
+      content-length:
+      - '28620'
+      date:
+      - Mon, 28 May 2012 14:16:27 GMT
+      connection:
+      - keep-alive
+      set-cookie:
+      - NSC_GBOE_216.178.160.43_80_DT1=ffffffff020ccfa545525d5f4f58455e445a4a423660;expires=Mon,
+        28-May-2012 14:36:27 GMT;path=/;httponly
+    body:
+      encoding: ASCII-8BIT
+      string: ! '<rss version="2.0"><channel><title>Fandango.com Movies Near Me</title><link><![CDATA[http://www.fandango.com/movietimes?wssaffid=11836&wssac=123]]></link><description>Review
+        movie listings for local theaters near you on Fandango.com</description><language>en-us</language><copyright>Copyright
+        2012 Fandango</copyright><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><ttl>1440</ttl><image><url>http://images.fandango.com/r87.6/images/global/fandango_rss_logo.gif</url><title>Fandango.com
+        Movies Near Me</title><link><![CDATA[http://www.fandango.com/movietimes?wssaffid=11836&wssac=123]]></link></image><item><title><![CDATA[AMC
+        Quail Springs Mall 24]]></title><link><![CDATA[http://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>2501
+        West Memorial Oklahoma City, OK 73134</p><p><ul><li><a href="http://www.fandango.com/abraham+lincoln3a+vampire+hunter_141897/movietimes?location=73134&wssaffid=11836&wssac=123">Abraham
+        Lincoln: Vampire Hunter</a></li><li><a href="http://www.fandango.com/the+amazing+spiderman+3d_141122/movietimes?location=73134&wssaffid=11836&wssac=123">The
+        Amazing Spider-Man 3D</a></li><li><a href="http://www.fandango.com/the+amazing+spiderman_126975/movietimes?location=73134&wssaffid=11836&wssac=123">The
+        Amazing Spider-Man</a></li><li><a href="http://www.fandango.com/the+amazing+spiderman3a+an+imax+3d+experience_153829/movietimes?location=73134&wssaffid=11836&wssac=123">The
+        Amazing Spider-Man: An IMAX 3D Experience</a></li><li><a href="http://www.fandango.com/battleship_130096/movietimes?location=73134&wssaffid=11836&wssac=123">Battleship</a></li><li><a
+        href="http://www.fandango.com/the+best+exotic+marigold+hotel_147777/movietimes?location=73134&wssaffid=11836&wssac=123">The
+        Best Exotic Marigold Hotel</a></li><li><a href="http://www.fandango.com/brave_136016/movietimes?location=73134&wssaffid=11836&wssac=123">Brave</a></li><li><a
+        href="http://www.fandango.com/bully_145958/movietimes?location=73134&wssaffid=11836&wssac=123">Bully</a></li><li><a
+        href="http://www.fandango.com/chernobyl+diaries_152960/movietimes?location=73134&wssaffid=11836&wssac=123">Chernobyl
+        Diaries</a></li><li><a href="http://www.fandango.com/chimpanzee_116882/movietimes?location=73134&wssaffid=11836&wssac=123">Chimpanzee</a></li><li><a
+        href="http://www.fandango.com/dark+shadows_147176/movietimes?location=73134&wssaffid=11836&wssac=123">Dark
+        Shadows</a></li><li><a href="http://www.fandango.com/the+dictator_145763/movietimes?location=73134&wssaffid=11836&wssac=123">The
+        Dictator</a></li><li><a href="http://www.fandango.com/happiest+baby+and+happiest+toddler+live+with+dr.+karp_154921/movietimes?location=73134&wssaffid=11836&wssac=123">Happiest
+        Baby and Happiest Toddler Live With Dr. Karp</a></li><li><a href="http://www.fandango.com/the+hunger+games_136944/movietimes?location=73134&wssaffid=11836&wssac=123">The
+        Hunger Games</a></li><li><a href="http://www.fandango.com/the+lucky+one_145457/movietimes?location=73134&wssaffid=11836&wssac=123">The
+        Lucky One</a></li><li><a href="http://www.fandango.com/madagascar+33a+europe27s+most+wanted+3d_151457/movietimes?location=73134&wssaffid=11836&wssac=123">Madagascar
+        3: Europe''s Most Wanted 3D</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers_30154/movietimes?location=73134&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers+3d_151545/movietimes?location=73134&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers 3D</a></li><li><a href="http://www.fandango.com/men+in+black+iii_135737/movietimes?location=73134&wssaffid=11836&wssac=123">Men
+        in Black III</a></li><li><a href="http://www.fandango.com/men+in+black+iii+3d_147264/movietimes?location=73134&wssaffid=11836&wssac=123">Men
+        in Black III 3D</a></li><li><a href="http://www.fandango.com/men+in+black+iii3a+an+imax+3d+experience_148659/movietimes?location=73134&wssaffid=11836&wssac=123">Men
+        in Black III: An IMAX 3D Experience</a></li><li><a href="http://www.fandango.com/national+theater+live3a+frankenstein+original+casting_137637/movietimes?location=73134&wssaffid=11836&wssac=123">National
+        Theater Live: Frankenstein (Original Casting)</a></li><li><a href="http://www.fandango.com/national+theater+live3a+frankenstein+reverse+casting_142883/movietimes?location=73134&wssaffid=11836&wssac=123">National
+        Theater Live: Frankenstein (Reverse Casting)</a></li><li><a href="http://www.fandango.com/the+pirates+band+of+misfits_146664/movietimes?location=73134&wssaffid=11836&wssac=123">The
+        Pirates! Band of Misfits</a></li><li><a href="http://www.fandango.com/prometheus+3d_152981/movietimes?location=73134&wssaffid=11836&wssac=123">Prometheus
+        3D</a></li><li><a href="http://www.fandango.com/prometheus3a+an+imax+3d+experience_153676/movietimes?location=73134&wssaffid=11836&wssac=123">Prometheus:
+        An IMAX 3D Experience</a></li><li><a href="http://www.fandango.com/ratatouille_98260/movietimes?location=73134&wssaffid=11836&wssac=123">Ratatouille</a></li><li><a
+        href="http://www.fandango.com/snow+white+and+the+huntsman_141533/movietimes?location=73134&wssaffid=11836&wssac=123">Snow
+        White and the Huntsman</a></li><li><a href="http://www.fandango.com/ted_136691/movietimes?location=73134&wssaffid=11836&wssac=123">Ted</a></li><li><a
+        href="http://www.fandango.com/the+tempest+starring+christopher+plummer_155187/movietimes?location=73134&wssaffid=11836&wssac=123">The
+        Tempest Starring Christopher Plummer</a></li><li><a href="http://www.fandango.com/that27s+my+boy_149081/movietimes?location=73134&wssaffid=11836&wssac=123">That''s
+        My Boy</a></li><li><a href="http://www.fandango.com/think+like+a+man_147732/movietimes?location=73134&wssaffid=11836&wssac=123">Think
+        Like a Man</a></li><li><a href="http://www.fandango.com/toy+story+3_124782/movietimes?location=73134&wssaffid=11836&wssac=123">Toy
+        Story 3</a></li><li><a href="http://www.fandango.com/up_114055/movietimes?location=73134&wssaffid=11836&wssac=123">Up</a></li><li><a
+        href="http://www.fandango.com/walle_102903/movietimes?location=73134&wssaffid=11836&wssac=123">WALL-E</a></li><li><a
+        href="http://www.fandango.com/what+to+expect+when+you27re+expecting_120322/movietimes?location=73134&wssaffid=11836&wssac=123">What
+        to Expect When You''re Expecting</a></li></ul></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[Northpark 7]]></title><link><![CDATA[http://www.fandango.com/northpark7_aaicu/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>12100
+        N. May Ave Oklahoma City, OK 73120</p><p><ul><li><a href="http://www.fandango.com/21+jump+street_131465/movietimes?location=73120&wssaffid=11836&wssac=123">21
+        Jump Street</a></li><li><a href="http://www.fandango.com/alvin+and+the+chipmunks3a+chipwrecked_141127/movietimes?location=73120&wssaffid=11836&wssac=123">Alvin
+        and the Chipmunks: Chipwrecked</a></li><li><a href="http://www.fandango.com/american+reunion_145402/movietimes?location=73120&wssaffid=11836&wssac=123">American
+        Reunion</a></li><li><a href="http://www.fandango.com/dr.+seuss27+the+lorax_51897/movietimes?location=73120&wssaffid=11836&wssac=123">Dr.
+        Seuss'' The Lorax</a></li><li><a href="http://www.fandango.com/dr.+seuss27+the+lorax+3d_148858/movietimes?location=73120&wssaffid=11836&wssac=123">Dr.
+        Seuss'' The Lorax 3D</a></li><li><a href="http://www.fandango.com/john+carter_130633/movietimes?location=73120&wssaffid=11836&wssac=123">John
+        Carter</a></li><li><a href="http://www.fandango.com/john+carter+3d_147144/movietimes?location=73120&wssaffid=11836&wssac=123">John
+        Carter 3D</a></li><li><a href="http://www.fandango.com/journey+23a+the+mysterious+island_135727/movietimes?location=73120&wssaffid=11836&wssac=123">Journey
+        2: The Mysterious Island</a></li><li><a href="http://www.fandango.com/mirror+mirror_143278/movietimes?location=73120&wssaffid=11836&wssac=123">Mirror
+        Mirror</a></li><li><a href="http://www.fandango.com/wrath+of+the+titans_140654/movietimes?location=73120&wssaffid=11836&wssac=123">Wrath
+        of the Titans</a></li></ul></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[Dickinson Penn Square
+        10]]></title><link><![CDATA[http://www.fandango.com/dickinsonpennsquare10_aagtg/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>1901
+        NW Expressway Oklahoma City, OK 73118</p><p><ul><li><a href="http://www.fandango.com/battleship_130096/movietimes?location=73118&wssaffid=11836&wssac=123">Battleship</a></li><li><a
+        href="http://www.fandango.com/chernobyl+diaries_152960/movietimes?location=73118&wssaffid=11836&wssac=123">Chernobyl
+        Diaries</a></li><li><a href="http://www.fandango.com/dark+shadows_147176/movietimes?location=73118&wssaffid=11836&wssac=123">Dark
+        Shadows</a></li><li><a href="http://www.fandango.com/the+dictator_145763/movietimes?location=73118&wssaffid=11836&wssac=123">The
+        Dictator</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers_30154/movietimes?location=73118&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers+3d_151545/movietimes?location=73118&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers 3D</a></li><li><a href="http://www.fandango.com/men+in+black+iii_135737/movietimes?location=73118&wssaffid=11836&wssac=123">Men
+        in Black III</a></li><li><a href="http://www.fandango.com/men+in+black+iii+3d_147264/movietimes?location=73118&wssaffid=11836&wssac=123">Men
+        in Black III 3D</a></li><li><a href="http://www.fandango.com/what+to+expect+when+you27re+expecting_120322/movietimes?location=73118&wssaffid=11836&wssac=123">What
+        to Expect When You''re Expecting</a></li></ul></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[B&B Theatres Windsor 10]]></title><link><![CDATA[http://www.fandango.com/bandbtheatreswindsor10_aavud/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>4623
+        A. N.W. 23rd St. Oklahoma City, OK 73127</p><p><ul><li><a href="http://www.fandango.com/battleship_130096/movietimes?location=73127&wssaffid=11836&wssac=123">Battleship</a></li><li><a
+        href="http://www.fandango.com/chernobyl+diaries_152960/movietimes?location=73127&wssaffid=11836&wssac=123">Chernobyl
+        Diaries</a></li><li><a href="http://www.fandango.com/dark+shadows_147176/movietimes?location=73127&wssaffid=11836&wssac=123">Dark
+        Shadows</a></li><li><a href="http://www.fandango.com/the+dictator_145763/movietimes?location=73127&wssaffid=11836&wssac=123">The
+        Dictator</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers_30154/movietimes?location=73127&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers+3d_151545/movietimes?location=73127&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers 3D</a></li><li><a href="http://www.fandango.com/men+in+black+iii_135737/movietimes?location=73127&wssaffid=11836&wssac=123">Men
+        in Black III</a></li><li><a href="http://www.fandango.com/men+in+black+iii+3d_147264/movietimes?location=73127&wssaffid=11836&wssac=123">Men
+        in Black III 3D</a></li><li><a href="http://www.fandango.com/what+to+expect+when+you27re+expecting_120322/movietimes?location=73127&wssaffid=11836&wssac=123">What
+        to Expect When You''re Expecting</a></li></ul></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[Kickingbird Cinema]]></title><link><![CDATA[http://www.fandango.com/kickingbirdcinema_aaenx/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>1225
+        East Danforth Rd Edmond, OK 73083</p><p></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[Cinemark Tinseltown]]></title><link><![CDATA[http://www.fandango.com/cinemarktinseltown_aaitg/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>6001
+        Martin Luther King Blvd. Oklahoma City, OK 73111</p><p><ul><li><a href="http://www.fandango.com/the+amazing+spiderman+3d_141122/movietimes?location=73111&wssaffid=11836&wssac=123">The
+        Amazing Spider-Man 3D</a></li><li><a href="http://www.fandango.com/anna+bolena+met+summer+encore_154543/movietimes?location=73111&wssaffid=11836&wssac=123">Anna
+        Bolena Met Summer Encore</a></li><li><a href="http://www.fandango.com/battleship_130096/movietimes?location=73111&wssaffid=11836&wssac=123">Battleship</a></li><li><a
+        href="http://www.fandango.com/bernie_149564/movietimes?location=73111&wssaffid=11836&wssac=123">Bernie</a></li><li><a
+        href="http://www.fandango.com/the+best+exotic+marigold+hotel_147777/movietimes?location=73111&wssaffid=11836&wssac=123">The
+        Best Exotic Marigold Hotel</a></li><li><a href="http://www.fandango.com/cabaret_104412/movietimes?location=73111&wssaffid=11836&wssac=123">Cabaret</a></li><li><a
+        href="http://www.fandango.com/chernobyl+diaries_152960/movietimes?location=73111&wssaffid=11836&wssac=123">Chernobyl
+        Diaries</a></li><li><a href="http://www.fandango.com/citizen+kane_1439/movietimes?location=73111&wssaffid=11836&wssac=123">Citizen
+        Kane</a></li><li><a href="http://www.fandango.com/a+clockwork+orange_370/movietimes?location=73111&wssaffid=11836&wssac=123">A
+        Clockwork Orange</a></li><li><a href="http://www.fandango.com/cool+hand+luke_15758/movietimes?location=73111&wssaffid=11836&wssac=123">Cool
+        Hand Luke</a></li><li><a href="http://www.fandango.com/cowgirls+n27+angels_154322/movietimes?location=73111&wssaffid=11836&wssac=123">Cowgirls
+        n'' Angels</a></li><li><a href="http://www.fandango.com/crooked+arrows_154422/movietimes?location=73111&wssaffid=11836&wssac=123">Crooked
+        Arrows</a></li><li><a href="http://www.fandango.com/dark+shadows_147176/movietimes?location=73111&wssaffid=11836&wssac=123">Dark
+        Shadows</a></li><li><a href="http://www.fandango.com/dci+2012+tour+premiere_154934/movietimes?location=73111&wssaffid=11836&wssac=123">DCI
+        2012 Tour Premiere</a></li><li><a href="http://www.fandango.com/der+rosenkavalier+met+summer+encore_154548/movietimes?location=73111&wssaffid=11836&wssac=123">Der
+        Rosenkavalier Met Summer Encore</a></li><li><a href="http://www.fandango.com/diary+of+a+wimpy+kid3a+rodrick+rules_139535/movietimes?location=73111&wssaffid=11836&wssac=123">Diary
+        of a Wimpy Kid: Rodrick Rules</a></li><li><a href="http://www.fandango.com/the+dictator_145763/movietimes?location=73111&wssaffid=11836&wssac=123">The
+        Dictator</a></li><li><a href="http://www.fandango.com/dolphin+tale_140092/movietimes?location=73111&wssaffid=11836&wssac=123">Dolphin
+        Tale</a></li><li><a href="http://www.fandango.com/don+giovanni+met+summer+encore_154545/movietimes?location=73111&wssaffid=11836&wssac=123">Don
+        Giovanni Met Summer Encore</a></li><li><a href="http://www.fandango.com/the+exorcist+1973_90729/movietimes?location=73111&wssaffid=11836&wssac=123">The
+        Exorcist (1973)</a></li><li><a href="http://www.fandango.com/happiest+baby+and+happiest+toddler+live+with+dr.+karp_154921/movietimes?location=73111&wssaffid=11836&wssac=123">Happiest
+        Baby and Happiest Toddler Live With Dr. Karp</a></li><li><a href="http://www.fandango.com/happy+feet+two_149198/movietimes?location=73111&wssaffid=11836&wssac=123">Happy
+        Feet Two</a></li><li><a href="http://www.fandango.com/the+hunger+games_136944/movietimes?location=73111&wssaffid=11836&wssac=123">The
+        Hunger Games</a></li><li><a href="http://www.fandango.com/journey+23a+the+mysterious+island_135727/movietimes?location=73111&wssaffid=11836&wssac=123">Journey
+        2: The Mysterious Island</a></li><li><a href="http://www.fandango.com/kung+fu+panda+2_119854/movietimes?location=73111&wssaffid=11836&wssac=123">Kung
+        Fu Panda 2</a></li><li><a href="http://www.fandango.com/le+comte+ory+met+summer+encore_154544/movietimes?location=73111&wssaffid=11836&wssac=123">Le
+        Comte Ory Met Summer Encore</a></li><li><a href="http://www.fandango.com/les+contes+de28099hoffmann+met+summer+encore_154546/movietimes?location=73111&wssaffid=11836&wssac=123">Les
+        Contes d’Hoffmann Met Summer Encore</a></li><li><a href="http://www.fandango.com/linkin+park+living+things+concert+event_156066/movietimes?location=73111&wssaffid=11836&wssac=123">Linkin
+        Park Living Things Concert Event</a></li><li><a href="http://www.fandango.com/lucia+di+lammermoor+met+summer+encore_154547/movietimes?location=73111&wssaffid=11836&wssac=123">Lucia
+        Di Lammermoor Met Summer Encore</a></li><li><a href="http://www.fandango.com/madagascar+33a+europe27s+most+wanted+3d_151457/movietimes?location=73111&wssaffid=11836&wssac=123">Madagascar
+        3: Europe''s Most Wanted 3D</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers_30154/movietimes?location=73111&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers+3d_151545/movietimes?location=73111&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers 3D</a></li><li><a href="http://www.fandango.com/men+in+black+iii_135737/movietimes?location=73111&wssaffid=11836&wssac=123">Men
+        in Black III</a></li><li><a href="http://www.fandango.com/men+in+black+iii+3d_147264/movietimes?location=73111&wssaffid=11836&wssac=123">Men
+        in Black III 3D</a></li><li><a href="http://www.fandango.com/national+theater+live3a+frankenstein+original+casting_137637/movietimes?location=73111&wssaffid=11836&wssac=123">National
+        Theater Live: Frankenstein (Original Casting)</a></li><li><a href="http://www.fandango.com/national+theater+live3a+frankenstein+reverse+casting_142883/movietimes?location=73111&wssaffid=11836&wssac=123">National
+        Theater Live: Frankenstein (Reverse Casting)</a></li><li><a href="http://www.fandango.com/north+by+northwest_631/movietimes?location=73111&wssaffid=11836&wssac=123">North
+        by Northwest</a></li><li><a href="http://www.fandango.com/prometheus+3d_152981/movietimes?location=73111&wssaffid=11836&wssac=123">Prometheus
+        3D</a></li><li><a href="http://www.fandango.com/puss+in+boots_131567/movietimes?location=73111&wssaffid=11836&wssac=123">Puss
+        in Boots</a></li><li><a href="http://www.fandango.com/rio+the+movie_131571/movietimes?location=73111&wssaffid=11836&wssac=123">Rio
+        The Movie</a></li><li><a href="http://www.fandango.com/the+searchers_1926/movietimes?location=73111&wssaffid=11836&wssac=123">The
+        Searchers</a></li><li><a href="http://www.fandango.com/snow+white+and+the+huntsman_141533/movietimes?location=73111&wssaffid=11836&wssac=123">Snow
+        White and the Huntsman</a></li><li><a href="http://www.fandango.com/star+trek3a+the+next+generation+25th+anniversary+event_155848/movietimes?location=73111&wssaffid=11836&wssac=123">Star
+        Trek: The Next Generation 25th Anniversary Event</a></li><li><a href="http://www.fandango.com/tcm+presents+singin27+in+the+rain+60th+anniversary+event_155652/movietimes?location=73111&wssaffid=11836&wssac=123">TCM
+        Presents Singin'' in the Rain 60th Anniversary Event</a></li><li><a href="http://www.fandango.com/the+tempest+starring+christopher+plummer_155187/movietimes?location=73111&wssaffid=11836&wssac=123">The
+        Tempest Starring Christopher Plummer</a></li><li><a href="http://www.fandango.com/that27s+entertainment_95288/movietimes?location=73111&wssaffid=11836&wssac=123">That''s
+        Entertainment!</a></li><li><a href="http://www.fandango.com/think+like+a+man_147732/movietimes?location=73111&wssaffid=11836&wssac=123">Think
+        Like a Man</a></li><li><a href="http://www.fandango.com/what+to+expect+when+you27re+expecting_120322/movietimes?location=73111&wssaffid=11836&wssac=123">What
+        to Expect When You''re Expecting</a></li><li><a href="http://www.fandango.com/winnie+the+pooh_141120/movietimes?location=73111&wssaffid=11836&wssac=123">Winnie
+        the Pooh</a></li><li><a href="http://www.fandango.com/yogi+bear_32983/movietimes?location=73111&wssaffid=11836&wssac=123">Yogi
+        Bear</a></li></ul></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[Yukon Movies 5]]></title><link><![CDATA[http://www.fandango.com/yukonmovies5_aaict/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>1219
+        Garth Brooks Rd. Yukon, OK 73099</p><p><ul><li><a href="http://www.fandango.com/battleship_130096/movietimes?location=73099&wssaffid=11836&wssac=123">Battleship</a></li><li><a
+        href="http://www.fandango.com/chernobyl+diaries_152960/movietimes?location=73099&wssaffid=11836&wssac=123">Chernobyl
+        Diaries</a></li><li><a href="http://www.fandango.com/the+dictator_145763/movietimes?location=73099&wssaffid=11836&wssac=123">The
+        Dictator</a></li><li><a href="http://www.fandango.com/what+to+expect+when+you27re+expecting_120322/movietimes?location=73099&wssaffid=11836&wssac=123">What
+        to Expect When You''re Expecting</a></li></ul></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[OmniDome Theatre]]></title><link><![CDATA[http://www.fandango.com/omnidometheatre_aaopy/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>2100
+        NE 52nd Street Oklahoma City, OK 73111</p><p><ul><li><a href="http://www.fandango.com/tornado+alley_140948/movietimes?location=73111&wssaffid=11836&wssac=123">Tornado
+        Alley</a></li></ul></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[Dickinson West End Pointe
+        8 Theatre]]></title><link><![CDATA[http://www.fandango.com/dickinsonwestendpointe8theatre_aauol/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>12825
+        NW 10th Yukon, OK 73099</p><p><ul><li><a href="http://www.fandango.com/21+jump+street_131465/movietimes?location=73099&wssaffid=11836&wssac=123">21
+        Jump Street</a></li><li><a href="http://www.fandango.com/dark+shadows_147176/movietimes?location=73099&wssaffid=11836&wssac=123">Dark
+        Shadows</a></li><li><a href="http://www.fandango.com/the+hunger+games_136944/movietimes?location=73099&wssaffid=11836&wssac=123">The
+        Hunger Games</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers_30154/movietimes?location=73099&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers+3d_151545/movietimes?location=73099&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers 3D</a></li><li><a href="http://www.fandango.com/men+in+black+iii_135737/movietimes?location=73099&wssaffid=11836&wssac=123">Men
+        in Black III</a></li><li><a href="http://www.fandango.com/men+in+black+iii+3d_147264/movietimes?location=73099&wssaffid=11836&wssac=123">Men
+        in Black III 3D</a></li><li><a href="http://www.fandango.com/mirror+mirror_143278/movietimes?location=73099&wssaffid=11836&wssac=123">Mirror
+        Mirror</a></li><li><a href="http://www.fandango.com/the+pirates+band+of+misfits_146664/movietimes?location=73099&wssaffid=11836&wssac=123">The
+        Pirates! Band of Misfits</a></li></ul></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[Harkins Cine Capri Bricktown]]></title><link><![CDATA[http://www.fandango.com/harkinscinecapribricktown_aaswz/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>150
+        East Reno Ave. Oklahoma City, OK 73104</p><p><ul><li><a href="http://www.fandango.com/battleship_130096/movietimes?location=73104&wssaffid=11836&wssac=123">Battleship</a></li><li><a
+        href="http://www.fandango.com/the+best+exotic+marigold+hotel_147777/movietimes?location=73104&wssaffid=11836&wssac=123">The
+        Best Exotic Marigold Hotel</a></li><li><a href="http://www.fandango.com/chernobyl+diaries_152960/movietimes?location=73104&wssaffid=11836&wssac=123">Chernobyl
+        Diaries</a></li><li><a href="http://www.fandango.com/cowgirls+n27+angels_154322/movietimes?location=73104&wssaffid=11836&wssac=123">Cowgirls
+        n'' Angels</a></li><li><a href="http://www.fandango.com/dark+shadows_147176/movietimes?location=73104&wssaffid=11836&wssac=123">Dark
+        Shadows</a></li><li><a href="http://www.fandango.com/the+dictator_145763/movietimes?location=73104&wssaffid=11836&wssac=123">The
+        Dictator</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers_30154/movietimes?location=73104&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers</a></li><li><a href="http://www.fandango.com/marvel27s+the+avengers+3d_151545/movietimes?location=73104&wssaffid=11836&wssac=123">Marvel''s
+        The Avengers 3D</a></li><li><a href="http://www.fandango.com/men+in+black+iii_135737/movietimes?location=73104&wssaffid=11836&wssac=123">Men
+        in Black III</a></li><li><a href="http://www.fandango.com/men+in+black+iii+3d_147264/movietimes?location=73104&wssaffid=11836&wssac=123">Men
+        in Black III 3D</a></li><li><a href="http://www.fandango.com/snow+white+and+the+huntsman_141533/movietimes?location=73104&wssaffid=11836&wssac=123">Snow
+        White and the Huntsman</a></li><li><a href="http://www.fandango.com/think+like+a+man_147732/movietimes?location=73104&wssaffid=11836&wssac=123">Think
+        Like a Man</a></li><li><a href="http://www.fandango.com/what+to+expect+when+you27re+expecting_120322/movietimes?location=73104&wssaffid=11836&wssac=123">What
+        to Expect When You''re Expecting</a></li></ul></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item><item><title><![CDATA[AAFES Base Theatre]]></title><link><![CDATA[http://www.fandango.com/aafesbasetheatre_aaqbg/theaterpage?wssaffid=11836&wssac=123]]></link><description><![CDATA[<p>3000
+        S. Douglas Ave. Oklahoma City, OK 73109</p><p></p><p><a href="http://www.fandango.com/movietimes?wssaffid=11836&wssac=123">Search
+        other theaters</a></p>]]></description><author>affiliates@fandango.com</author><category>Movies
+        Near Me</category><pubDate>Mon, 28 May 2012 14:16:27 GMT</pubDate><source
+        url="http://www.fandango.com/rss/moviesnearme_73142.rss?wssaffid=11836&amp;wssac=123">Fandango.com
+        Movies Near Me</source></item></channel></rss>'
+    http_version: '1.1'
+  recorded_at: Mon, 28 May 2012 14:16:28 GMT
+recorded_with: VCR 2.1.1

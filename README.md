@@ -36,6 +36,4 @@ The movies are an array of hashes. Each hash contains title and Fandango's id.
 
 ## Todo
 
-* There's only 1 test at the moment. It's small enough. Later, may want to add more broken down tests.
-* Support for non-US postal codes
-  * parse non-US postal codes (currently only parses digits -- i.e. US zipcodes).
+* Remove Feezirra. For what we're doing, it's not worth the dependency. Just make request and parse ourselves.
