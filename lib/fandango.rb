@@ -9,16 +9,16 @@ module Fandango
 
   class << self
 
-    def movies_near(postal_code)
+    def movies_near(postal_code, associate_id = '')
       raise ArgumentError, "postal code cannot be blank" if postal_code.nil? || postal_code == ''
-      response = request(postal_code)
+      response = request(postal_code, associate_id)
       raise BadResponse.new(response) unless response.status.first == '200'
       source = response.read
       parse source
     end
 
-    def request(postal_code)
-      open(url_for_postal_code(postal_code))
+    def request(postal_code, associate_id = '')
+      open(url_for_postal_code(postal_code, associate_id))
     end
 
     # Given RSS source string, parse using Nokogiri.
@@ -29,9 +29,13 @@ module Fandango
 
   private
 
-    def url_for_postal_code(postal_code)
+    def url_for_postal_code(postal_code, associate_id)
       cleaned_postal_code = clean_postal_code(postal_code)
-      "http://www.fandango.com/rss/moviesnearme_#{cleaned_postal_code}.rss"
+      associate_add_on = ''
+      if (associate_id == '')
+        associate_add_on = "?pid={associated_id}"
+      end
+      "http://www.fandango.com/rss/moviesnearme_#{cleaned_postal_code}.rss{associate_add_on}"
     end
 
     # Remove spaces.
