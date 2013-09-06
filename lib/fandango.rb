@@ -33,7 +33,7 @@ module Fandango
       cleaned_postal_code = clean_postal_code(postal_code)
       associate_add_on = ''
       if (associate_id == '')
-        associate_add_on = "?pid=#{associated_id}"
+        associate_add_on = "?pid=#{associate_id}"
       end
       "http://www.fandango.com/rss/moviesnearme_#{cleaned_postal_code}.rss#{associate_add_on}"
     end

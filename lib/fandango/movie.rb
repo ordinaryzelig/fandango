@@ -9,6 +9,7 @@ module Fandango
           {
             title: parse_title(li),
             id:    parse_id(li),
+            url:   parse_url(li),
           }
         end
       end
@@ -24,6 +25,9 @@ module Fandango
         li.at_css('a')['href'].match(%r{fandango\.com/.*_(?<id>\d+)/movietimes})[:id]
       end
 
+      def parse_url(li)
+        li.at_css('a')['href']
+      end
     end
 
   end
