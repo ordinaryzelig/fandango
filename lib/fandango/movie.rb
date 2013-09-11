@@ -22,7 +22,7 @@ module Fandango
 
       # E.g. '141081' in fandango.com/the+adventures+of+tintin+3d_141081/movietimes
       def parse_id(li)
-        li.at_css('a')['href'].match(%r{fandango\.com/.*_(?<id>\d+)/movietimes})[:id]
+        li.at_css('a')['href'].match(%r{fandango\.com(/|%2f).*_(?<id>\d+)(/|%2f)movietimes})[:id]
       end
 
       def parse_url(li)

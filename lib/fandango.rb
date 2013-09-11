@@ -24,7 +24,7 @@ module Fandango
         response = request_times(theater_code, date, associate_id)
         raise BadResponse.new(response) unless response.status.first == '200'
         source = response.read
-        hash[date.strftime("%m/%d/%Y")] = parse_times source
+        hash[date.strftime("%Y/%m/%d")] = parse_times source
       end
       hash
     end

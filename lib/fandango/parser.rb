@@ -42,18 +42,13 @@ module Fandango
 
     def parse_times
       @doc = Nokogiri.HTML(@source)
-#      @doc.xpath("//div[@class='times']/a[@class='showtime_itr']").map do |times_node|
-#      @doc.xpath("//a[@class='showtime_itr']").map do |times_node|
       @doc.css("a[class=showtime_itr]").map do |times_node|
-        #puts times_node.to_s
         hash = {}
         ticket_url = times_node["href"]
         hash[:ticket_url] = ticket_url
-        #puts hash[:ticket_url]
         hash[:time] = times_node.css("span[class=showtime_pop]").text
-        hash[:movie_id] = ticket_url.match(%r{[&?]mid=(?<id>\d+)})[:id]
-        hash[:row_count] = ticket_url.match(%r{[&?]row_count=(?<id>\d+)})[:id]
-        #puts hash[:time]
+        hash[:movie_id] = ticket_url.match(%r{([&?]|%3f|%26)mid=(?<id>\d+)})[:id]
+        hash[:row_count] = ticket_url.match(%r{([&?]|%3f|%26)row_count=(?<id>\d+)})[:id]
         hash
       end
     end
