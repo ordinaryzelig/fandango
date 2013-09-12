@@ -16,6 +16,11 @@ module Fandango
         parser.parse_times
       end
 
+      def parse_imdb_mappings(source)
+        parser = new(source)
+        parser.parse_imdb_mappings
+      end
+
       # Description content is wrapped in CDATA.
       # Parse it and return a parsed Nokogiri node.
       def parse_description(item_node)
@@ -42,13 +47,26 @@ module Fandango
 
     def parse_times
       @doc = Nokogiri.HTML(@source)
-      @doc.css("a[class=showtime_itr]").map do |times_node|
+      @doc.css("div[class=times] a[class=showtime_itr]").map do |times_node|
         hash = {}
         ticket_url = times_node["href"]
         hash[:ticket_url] = ticket_url
         hash[:time] = times_node.css("span[class=showtime_pop]").text
         hash[:movie_id] = ticket_url.match(%r{([&?]|%3f|%26)mid=(?<id>\d+)})[:id]
         hash[:row_count] = ticket_url.match(%r{([&?]|%3f|%26)row_count=(?<id>\d+)})[:id]
+        hash
+      end
+    end
+
+    def parse_imdb_mappings
+            @doc = Nokogiri.HTML(@source)
+      @doc.css("div[id=get_tickets_button] a").map do |mapping_node|
+        hash = {}
+        ticket_url = mapping_node["href"]
+        hash[:movie_title] = mapping_node["data-title"]
+        hash[:imdb_id] = mapping_node["data-titleid"].match(%r{tt(?<id>\d+)})[:id]
+        hash[:movie_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)mid=(?<id>\d+)})[:id]
+        hash[:theater_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)tid=(?<id>[a-zA-Z]+)})[:id]
         hash
       end
     end

@@ -29,6 +29,14 @@ module Fandango
       hash
     end
 
+    def imdb_mappings(postal_code)
+      raise ArgumentError, "postal code cannot be blank" if postal_code.nil? || postal_code == ''
+      response = request_imdb_mappings(postal_code)
+      raise BadResponse.new(response) unless response.status.first == '200'
+      source = response.read
+      parse_imdb_mappings source
+    end
+
     def request(postal_code, associate_id = '')
       open(url_for_postal_code(postal_code, associate_id))
     end
@@ -41,6 +49,10 @@ module Fandango
       open(url_for_theater_code(theater_code, date, associate_id))
     end
 
+    def request_imdb_mappings(postal_code)
+      open(imdb_url_for_postal_code(postal_code))
+    end
+
     # Given RSS source string, parse using Nokogiri.
     # Return hash of theaters and movies playing at each..
     def parse(source)
@@ -49,6 +61,10 @@ module Fandango
 
     def parse_times(source)
       Parser.parse_times(source)
+    end
+
+    def parse_imdb_mappings(source)
+      Parser.parse_imdb_mappings(source)
     end
 
   private
@@ -78,6 +94,11 @@ module Fandango
         associate_add_on = "&wssaffid=#{associate_id}"
       end
       "http://www.fandango.com/a_#{theater_code}/theaterpage?date=#{cleaned_date}#{associate_add_on}"
+    end
+
+    def imdb_url_for_postal_code(postal_code)
+      cleaned_postal_code = clean_postal_code(postal_code)
+      "http://www.imdb.com/showtimes/cinemas/US/#{cleaned_postal_code}"
     end
 
   end
