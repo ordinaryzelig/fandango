@@ -16,6 +16,11 @@ module Fandango
         parser.parse_times
       end
 
+      def parse_theater(source)
+        parser = new(source)
+        parser.parse_theater
+      end
+
       def parse_imdb_mappings(source)
         parser = new(source)
         parser.parse_imdb_mappings
@@ -45,6 +50,19 @@ module Fandango
       end
     end
 
+    def parse_theater
+      @doc = Nokogiri.HTML(@source)
+      hash = {}
+      # theater info
+      theater_details = @doc.css("div[class=info] div[class=adr]")
+      hash[:name] = theater_details.css("span[class=org]").text
+      hash[:address] = theater_details.css("span[class=street-address]").text
+      hash[:locality] = theater_details.css("span[class=locality]").text
+      hash[:region] = theater_details.css("span[class=region]").text
+      hash[:postal] = theater_details.css("span[class=postal-code]").text
+      hash
+    end
+
     def parse_times
       @doc = Nokogiri.HTML(@source)
       @doc.css("div[class=times] a[class=showtime_itr]").map do |times_node|
@@ -59,8 +77,8 @@ module Fandango
     end
 
     def parse_imdb_mappings
-            @doc = Nokogiri.HTML(@source)
-      @doc.css("div[id=get_tickets_button] a").map do |mapping_node|
+        @doc = Nokogiri.HTML(@source)
+        @doc.css("div[id=get_tickets_button] a").map do |mapping_node|
         hash = {}
         ticket_url = mapping_node["href"]
         hash[:movie_title] = mapping_node["data-title"]

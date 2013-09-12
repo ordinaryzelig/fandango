@@ -20,10 +20,16 @@ module Fandango
     def movie_times_for_theater(theater_code, start_date, end_date, associate_id = '')
       raise ArgumentError, "theater code cannot be blank" if theater_code.nil? || theater_code == ''
       hash = {}
+      theater = nil
       start_date.upto(end_date) do |date|
         response = request_times(theater_code, date, associate_id)
         raise BadResponse.new(response) unless response.status.first == '200'
         source = response.read
+        if theater.nil?
+          theater = parse_theater source
+          theater[:id] = theater_code
+          hash[:theater] = theater
+        end
         hash[date.strftime("%Y/%m/%d")] = parse_times source
       end
       hash
@@ -61,6 +67,10 @@ module Fandango
 
     def parse_times(source)
       Parser.parse_times(source)
+    end
+
+    def parse_theater(source)
+      Parser.parse_theater(source)
     end
 
     def parse_imdb_mappings(source)
