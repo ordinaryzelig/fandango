@@ -29,18 +29,35 @@ module Fandango
           theater = parse_theater source
           theater[:id] = theater_code
           hash[:theater] = theater
+          hash[:showtimes] = {}
         end
-        hash[date.strftime("%Y/%m/%d")] = parse_times source
+        hash[:showtimes][date.strftime("%Y/%m/%d")] = parse_times source
       end
       hash
     end
 
-    def imdb_mappings(postal_code)
+    def imdb_mappings(postal_code, start_date=nil, end_date=nil)
       raise ArgumentError, "postal code cannot be blank" if postal_code.nil? || postal_code == ''
-      response = request_imdb_mappings(postal_code)
-      raise BadResponse.new(response) unless response.status.first == '200'
-      source = response.read
-      parse_imdb_mappings source
+      collection = {}
+      if (start_date.nil?)
+        response = request_imdb_mappings(postal_code)
+        raise BadResponse.new(response) unless response.status.first == '200'
+        source = response.read
+        parse_imdb_mappings(source, collection)
+      elsif (!start_date.nil? && end_date.nil?)
+        response = request_imdb_mappings(postal_code)
+        raise BadResponse.new(response) unless response.status.first == '200'
+        source = response.read
+        parse_imdb_mappings(source, collection)
+      else
+        start_date.upto(end_date) do |date|
+          response = request_imdb_mappings(postal_code, date)
+          raise BadResponse.new(response) unless response.status.first == '200'
+          source = response.read
+          parse_imdb_mappings(source, collection)
+        end
+      end
+      return collection
     end
 
     def request(postal_code, associate_id = '')
@@ -55,8 +72,8 @@ module Fandango
       open(url_for_theater_code(theater_code, date, associate_id))
     end
 
-    def request_imdb_mappings(postal_code)
-      open(imdb_url_for_postal_code(postal_code))
+    def request_imdb_mappings(postal_code, date=nil)
+      open(imdb_url_for_postal_code(postal_code, date))
     end
 
     # Given RSS source string, parse using Nokogiri.
@@ -73,8 +90,8 @@ module Fandango
       Parser.parse_theater(source)
     end
 
-    def parse_imdb_mappings(source)
-      Parser.parse_imdb_mappings(source)
+    def parse_imdb_mappings(source, collection)
+      Parser.parse_imdb_mappings(source, collection)
     end
 
   private
@@ -97,6 +114,10 @@ module Fandango
       return time.strftime("%m/%d/%Y")
     end
 
+    def imdb_formatted_date(time)
+      return time.strftime("%Y-%m-%d")
+    end
+
     def url_for_theater_code(theater_code, date, associate_id)
       cleaned_date = formatted_date(date)
       associate_add_on = ''
@@ -106,9 +127,13 @@ module Fandango
       "http://www.fandango.com/a_#{theater_code}/theaterpage?date=#{cleaned_date}#{associate_add_on}"
     end
 
-    def imdb_url_for_postal_code(postal_code)
+    def imdb_url_for_postal_code(postal_code, date=nil)
       cleaned_postal_code = clean_postal_code(postal_code)
-      "http://www.imdb.com/showtimes/cinemas/US/#{cleaned_postal_code}"
+      if (date.nil?)
+        "http://www.imdb.com/showtimes/cinemas/US/#{cleaned_postal_code}"
+      else
+        "http://www.imdb.com/showtimes/cinemas/US/#{cleaned_postal_code}/#{imdb_formatted_date(date)}"
+      end
     end
 
   end

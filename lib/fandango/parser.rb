@@ -21,9 +21,9 @@ module Fandango
         parser.parse_theater
       end
 
-      def parse_imdb_mappings(source)
+      def parse_imdb_mappings(source, collection)
         parser = new(source)
-        parser.parse_imdb_mappings
+        parser.parse_imdb_mappings(collection)
       end
 
       # Description content is wrapped in CDATA.
@@ -76,16 +76,33 @@ module Fandango
       end
     end
 
-    def parse_imdb_mappings
-        @doc = Nokogiri.HTML(@source)
-        @doc.css("div[id=get_tickets_button] a").map do |mapping_node|
+    def parse_imdb_mappings(collection)
+      @doc = Nokogiri.HTML(@source)
+      movies = @doc.css("div[class=info]").each do |movie_node|
         hash = {}
-        ticket_url = mapping_node["href"]
-        hash[:movie_title] = mapping_node["data-title"]
-        hash[:imdb_id] = mapping_node["data-titleid"].match(%r{tt(?<id>\d+)})[:id]
-        hash[:movie_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)mid=(?<id>\d+)})[:id]
-        hash[:theater_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)tid=(?<id>[a-zA-Z]+)})[:id]
-        hash
+        showtimes = movie_node.css("div[class=showtimes]")
+        get_tickets_button = showtimes.css("div[id=get_tickets_button] a")
+        if get_tickets_button.nil? || get_tickets_button.size == 0
+          # no fandango ticket button
+          non_fandango_times = showtimes.css("a")
+          if !non_fandango_times.nil? && non_fandango_times.size > 0
+            href = non_fandango_times[0]["href"]
+            title = non_fandango_times[0]["title"]
+            hash[:movie_title] = title.match(%r{Showtimes for (?<id>.+)})[:id]
+            hash[:imdb_id] = href.match(%r{/title/tt(?<id>\d+)})[:id]
+            key = "#{hash[:imdb_id]}:"
+            collection[key] = hash
+          end
+        else
+          # fandango ticket button
+          ticket_url = get_tickets_button[0]["href"]
+          hash[:movie_title] = get_tickets_button[0]["data-title"]
+          hash[:imdb_id] = get_tickets_button[0]["data-titleid"].match(%r{tt(?<id>\d+)})[:id]
+          hash[:movie_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)mid=(?<id>\d+)})[:id]
+          hash[:theater_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)tid=(?<id>[a-zA-Z]+)})[:id]
+          key = "#{hash[:imdb_id]}:#{hash[:movie_id]}"
+          collection[key] = hash
+        end
       end
     end
 
