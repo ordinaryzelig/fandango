@@ -45,7 +45,7 @@ module Fandango
         source = response.read
         parse_imdb_mappings(source, collection)
       elsif (!start_date.nil? && end_date.nil?)
-        response = request_imdb_mappings(postal_code)
+        response = request_imdb_mappings(postal_code, date)
         raise BadResponse.new(response) unless response.status.first == '200'
         source = response.read
         parse_imdb_mappings(source, collection)
