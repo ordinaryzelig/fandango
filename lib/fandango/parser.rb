@@ -68,10 +68,18 @@ module Fandango
       @doc.css("div[class=times] a[class=showtime_itr]").map do |times_node|
         hash = {}
         ticket_url = times_node["href"]
+        if ticket_url.nil?
+          next
+        end
         hash[:ticket_url] = ticket_url
         hash[:time] = times_node.css("span[class=showtime_pop]").text
-        hash[:movie_id] = ticket_url.match(%r{([&?]|%3f|%26)mid=(?<id>\d+)})[:id]
-        hash[:row_count] = ticket_url.match(%r{([&?]|%3f|%26)row_count=(?<id>\d+)})[:id]
+        movie_id_match = ticket_url.match(%r{([&?]|%3f|%26|&amp;)mid=(?<id>\d+)})
+        if movie_id_match.nil?
+          puts "[Fandango] parse error: looking for mid= in #{ticket_url}"
+          next
+        end
+        hash[:movie_id] = movie_id_match[:id]
+        hash[:row_count] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)row_count=(?<id>\d+)})[:id]
         hash
       end
     end
