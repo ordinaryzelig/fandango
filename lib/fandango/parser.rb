@@ -69,7 +69,7 @@ module Fandango
       @doc.css("ul[class=showtimes] li").each do |movie_node|
         movie_title_section = movie_node.at_css("div[class=title]")
         if !movie_title_section.nil?
-          movie_a = movie_title_section.at_css("a[class=image]")
+          movie_a = movie_title_section.at_css("a")
           movie_id = movie_a["href"].match(%r{fandango\.com(/|%2f).*_(?<id>.*)(/|%2f)movieoverview})[:id]
           # movie_name = movie_a.text
 
