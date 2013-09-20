@@ -78,8 +78,10 @@ module Fandango
             ticketed_showtime = showtime_node.at_css("a[class=showtime_itr]")
             if ticketed_showtime.nil?
               hash[:time] = showtime_node.text
+            elsif ticketed_showtime["href"].nil?
+              hash[:time] = ticketed_showtime.text
             else
-              hash[:time] = ticketed_showtime.css("span[class=showtime_pop]").text
+              hash[:time] = ticketed_showtime.at_css("span[class=showtime_pop]").text
               ticket_url = ticketed_showtime["href"]
               hash[:ticket_url] = ticket_url
               hash[:row_count] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)row_count=(?<id>\d+)})[:id]
