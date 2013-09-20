@@ -65,23 +65,31 @@ module Fandango
 
     def parse_times
       @doc = Nokogiri.HTML(@source)
-      @doc.css("div[class=times] a[class=showtime_itr]").map do |times_node|
-        hash = {}
-        ticket_url = times_node["href"]
-        if ticket_url.nil?
-          next
+      showtimes = []
+      @doc.css("ul[class=showtimes] li").each do |movie_node|
+        movie_title_section = movie_node.at_css("div[class=title]")
+        if !movie_title_section.nil?
+          movie_a = movie_title_section.at_css("a[class=image]")
+          movie_id = movie_a["href"].match(%r{fandango\.com(/|%2f).*_(?<id>.*)(/|%2f)movieoverview})[:id]
+          # movie_name = movie_a.text
+
+          movie_node.css("div[class=times] li").each do |showtime_node|
+            hash = {}
+            ticketed_showtime = showtime_node.at_css("a[class=showtime_itr]")
+            if ticketed_showtime.nil?
+              hash[:time] = showtime_node.text
+            else
+              hash[:time] = ticketed_showtime.css("span[class=showtime_pop]").text
+              ticket_url = ticketed_showtime["href"]
+              hash[:ticket_url] = ticket_url
+              hash[:row_count] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)row_count=(?<id>\d+)})[:id]
+            end
+            hash[:movie_id] = movie_id
+            showtimes << hash
+          end
         end
-        hash[:ticket_url] = ticket_url
-        hash[:time] = times_node.css("span[class=showtime_pop]").text
-        movie_id_match = ticket_url.match(%r{([&?]|%3f|%26|&amp;)mid=(?<id>\d+)})
-        if movie_id_match.nil?
-          puts "[Fandango] parse error: looking for mid= in #{ticket_url}"
-          next
-        end
-        hash[:movie_id] = movie_id_match[:id]
-        hash[:row_count] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)row_count=(?<id>\d+)})[:id]
-        hash
       end
+      return showtimes
     end
 
     def parse_imdb_mappings(collection)
