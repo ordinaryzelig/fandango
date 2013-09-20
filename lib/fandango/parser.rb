@@ -71,7 +71,7 @@ module Fandango
         if !movie_title_section.nil?
           movie_a = movie_title_section.at_css("a")
           movie_id = movie_a["href"].match(%r{fandango\.com(/|%2f).*_(?<id>.*)(/|%2f)movieoverview})[:id]
-          # movie_name = movie_a.text
+          movie_name = movie_a.text
 
           movie_node.css("div[class=times] li").each do |showtime_node|
             hash = {}
@@ -87,6 +87,7 @@ module Fandango
               hash[:row_count] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)row_count=(?<id>\d+)})[:id]
             end
             hash[:movie_id] = movie_id
+            hash[:name] = movie_name.gsub(/(\\n|\\r|\\t)+/, '').squish
             showtimes << hash
           end
         end
