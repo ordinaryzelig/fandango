@@ -99,35 +99,36 @@ module Fandango
       @doc = Nokogiri.HTML(@source)
       movies = @doc.css("div[class=info]").each do |movie_node|
         hash = {}
-        showtimes = movie_node.css("div[class=showtimes]")
-        get_tickets_button = showtimes.css("div[id=get_tickets_button] a")
-        if get_tickets_button.nil? || get_tickets_button.size == 0
-          # no fandango ticket button
-          non_fandango_times = showtimes.css("a")
-          if !non_fandango_times.nil? && non_fandango_times.size > 0
-            href = non_fandango_times[0]["href"]
-            title = non_fandango_times[0]["title"]
-            hash[:movie_title] = title.match(%r{Showtimes for (?<id>.+)})[:id]
-            hash[:imdb_id] = href.match(%r{/title/tt(?<id>\d+)})[:id]
-            key = "#{hash[:imdb_id]}:"
+        movie_node.css("div[class=showtimes]").each do | showtimes |
+          get_tickets_button = showtimes.css("div[id=get_tickets_button] a")
+          if get_tickets_button.nil? || get_tickets_button.size == 0
+            # no fandango ticket button
+            non_fandango_times = showtimes.css("a")
+            if !non_fandango_times.nil? && non_fandango_times.size > 0
+              href = non_fandango_times[0]["href"]
+              title = non_fandango_times[0]["title"]
+              hash[:movie_title] = title.match(%r{Showtimes for (?<id>.+)})[:id]
+              hash[:imdb_id] = href.match(%r{/title/tt(?<id>\d+)})[:id]
+              key = "#{hash[:imdb_id]}:"
+              collection[key] = hash
+            end
+          else
+            # fandango ticket button
+            ticket_url = get_tickets_button[0]["href"]
+            hash[:movie_title] = get_tickets_button[0]["data-title"]
+            # valid value for data-titleid is ""
+            titleid_matches = get_tickets_button[0]["data-titleid"].match(%r{tt(?<id>\d+)})
+            if !titleid_matches.nil?
+              hash[:imdb_id] = titleid_matches[:id]
+            else
+              # without an imdb id, this record is useless
+              next
+            end
+            hash[:movie_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)mid=(?<id>\d+)})[:id]
+            hash[:theater_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)tid=(?<id>[a-zA-Z]+)})[:id]
+            key = "#{hash[:imdb_id]}:#{hash[:movie_id]}"
             collection[key] = hash
           end
-        else
-          # fandango ticket button
-          ticket_url = get_tickets_button[0]["href"]
-          hash[:movie_title] = get_tickets_button[0]["data-title"]
-          # valid value for data-titleid is ""
-          titleid_matches = get_tickets_button[0]["data-titleid"].match(%r{tt(?<id>\d+)})
-          if !titleid_matches.nil?
-            hash[:imdb_id] = titleid_matches[:id]
-          else
-            # without an imdb id, this record is useless
-            next
-          end
-          hash[:movie_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)mid=(?<id>\d+)})[:id]
-          hash[:theater_id] = ticket_url.match(%r{([&?]|%3f|%26|&amp;)tid=(?<id>[a-zA-Z]+)})[:id]
-          key = "#{hash[:imdb_id]}:#{hash[:movie_id]}"
-          collection[key] = hash
         end
       end
     end
