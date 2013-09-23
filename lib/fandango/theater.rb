@@ -33,7 +33,7 @@ module Fandango
         item_node.
           at_css('link').
           content.
-          match(%r{fandango\.com/.*_(?<id>.*)/theaterpage})[:id]
+          match(%r{fandango\.com(/|%2f).*_(?<id>.*)(/|%2f)theaterpage})[:id]
       end
 
       def parse_address(description_node)
