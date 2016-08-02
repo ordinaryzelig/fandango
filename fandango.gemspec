@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency     'nokogiri', '~> 1.0'
 
   s.add_development_dependency 'awesome_print'
-  s.add_development_dependency 'fakeweb'
+  s.add_development_dependency 'webmock'
   s.add_development_dependency 'minitest'
   s.add_development_dependency 'vcr'
 end

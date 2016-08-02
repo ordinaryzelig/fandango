@@ -1,6 +1,9 @@
-require 'spec_helper'
+require_relative 'spec_helper'
+require          'support/fixture_helpers'
 
 describe Fandango::Parser do
+
+  include FixtureHelpers
 
   specify '.parse returns hash of results' do
     source = fixture_file_content('movies_near_me_73142.rss')

@@ -1,6 +1,10 @@
-require 'spec_helper'
+require_relative 'spec_helper'
+require          'support/vcr'
+require          'support/fixture_helpers'
 
 describe Fandango do
+
+  include FixtureHelpers
 
   describe '.movies_near' do
 

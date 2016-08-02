@@ -5,13 +5,13 @@
     :address: 2501 West Memorial Oklahoma City, OK 73134
     :postal_code: '73134'
   :movies:
-  - :title: ! 'Abraham Lincoln: Vampire Hunter'
+  - :title: 'Abraham Lincoln: Vampire Hunter'
     :id: '141897'
   - :title: The Amazing Spider-Man 3D
     :id: '141122'
   - :title: The Amazing Spider-Man
     :id: '126975'
-  - :title: ! 'The Amazing Spider-Man: An IMAX 3D Experience'
+  - :title: 'The Amazing Spider-Man: An IMAX 3D Experience'
     :id: '153829'
   - :title: Battleship
     :id: '130096'
@@ -35,7 +35,7 @@
     :id: '136944'
   - :title: The Lucky One
     :id: '145457'
-  - :title: ! 'Madagascar 3: Europe''s Most Wanted 3D'
+  - :title: 'Madagascar 3: Europe''s Most Wanted 3D'
     :id: '151457'
   - :title: Marvel's The Avengers
     :id: '30154'
@@ -45,17 +45,17 @@
     :id: '135737'
   - :title: Men in Black III 3D
     :id: '147264'
-  - :title: ! 'Men in Black III: An IMAX 3D Experience'
+  - :title: 'Men in Black III: An IMAX 3D Experience'
     :id: '148659'
-  - :title: ! 'National Theater Live: Frankenstein (Original Casting)'
+  - :title: 'National Theater Live: Frankenstein (Original Casting)'
     :id: '137637'
-  - :title: ! 'National Theater Live: Frankenstein (Reverse Casting)'
+  - :title: 'National Theater Live: Frankenstein (Reverse Casting)'
     :id: '142883'
   - :title: The Pirates! Band of Misfits
     :id: '146664'
   - :title: Prometheus 3D
     :id: '152981'
-  - :title: ! 'Prometheus: An IMAX 3D Experience'
+  - :title: 'Prometheus: An IMAX 3D Experience'
     :id: '153676'
   - :title: Ratatouille
     :id: '98260'
@@ -85,7 +85,7 @@
   :movies:
   - :title: 21 Jump Street
     :id: '131465'
-  - :title: ! 'Alvin and the Chipmunks: Chipwrecked'
+  - :title: 'Alvin and the Chipmunks: Chipwrecked'
     :id: '141127'
   - :title: American Reunion
     :id: '145402'
@@ -97,7 +97,7 @@
     :id: '130633'
   - :title: John Carter 3D
     :id: '147144'
-  - :title: ! 'Journey 2: The Mysterious Island'
+  - :title: 'Journey 2: The Mysterious Island'
     :id: '135727'
   - :title: Mirror Mirror
     :id: '143278'
@@ -193,7 +193,7 @@
     :id: '154934'
   - :title: Der Rosenkavalier Met Summer Encore
     :id: '154548'
-  - :title: ! 'Diary of a Wimpy Kid: Rodrick Rules'
+  - :title: 'Diary of a Wimpy Kid: Rodrick Rules'
     :id: '139535'
   - :title: The Dictator
     :id: '145763'
@@ -209,7 +209,7 @@
     :id: '149198'
   - :title: The Hunger Games
     :id: '136944'
-  - :title: ! 'Journey 2: The Mysterious Island'
+  - :title: 'Journey 2: The Mysterious Island'
     :id: '135727'
   - :title: Kung Fu Panda 2
     :id: '119854'
@@ -221,7 +221,7 @@
     :id: '156066'
   - :title: Lucia Di Lammermoor Met Summer Encore
     :id: '154547'
-  - :title: ! 'Madagascar 3: Europe''s Most Wanted 3D'
+  - :title: 'Madagascar 3: Europe''s Most Wanted 3D'
     :id: '151457'
   - :title: Marvel's The Avengers
     :id: '30154'
@@ -231,9 +231,9 @@
     :id: '135737'
   - :title: Men in Black III 3D
     :id: '147264'
-  - :title: ! 'National Theater Live: Frankenstein (Original Casting)'
+  - :title: 'National Theater Live: Frankenstein (Original Casting)'
     :id: '137637'
-  - :title: ! 'National Theater Live: Frankenstein (Reverse Casting)'
+  - :title: 'National Theater Live: Frankenstein (Reverse Casting)'
     :id: '142883'
   - :title: North by Northwest
     :id: '631'
@@ -247,7 +247,7 @@
     :id: '1926'
   - :title: Snow White and the Huntsman
     :id: '141533'
-  - :title: ! 'Star Trek: The Next Generation 25th Anniversary Event'
+  - :title: 'Star Trek: The Next Generation 25th Anniversary Event'
     :id: '155848'
   - :title: TCM Presents Singin' in the Rain 60th Anniversary Event
     :id: '155652'

@@ -1,6 +1,9 @@
-require 'spec_helper'
+require_relative 'spec_helper'
+require          'support/fixture_helpers'
 
 describe Fandango::Movie do
+
+  include FixtureHelpers
 
   specify '.parse parses RSS item into array of movie attribute hashes' do
     description_node = description_node_from_fixture_file('item.html')

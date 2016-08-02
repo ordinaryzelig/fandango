@@ -1,6 +1,6 @@
 require 'pathname'
 
-module SpecHelpers
+module FixtureHelpers
 
   def fixture_file(file_name)
     fixtures_path = Pathname.new('./spec/support/fixtures/')
@@ -21,5 +21,3 @@ module SpecHelpers
   end
 
 end
-
-MiniTest::Unit::TestCase.send :include, SpecHelpers if defined?(MiniTest)
