@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fandango (1.0.0)
+    fandango (2.0.0)
       nokogiri (~> 1.0)
 
 GEM
