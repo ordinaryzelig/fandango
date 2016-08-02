@@ -1,0 +1,33 @@
+PATH
+  remote: .
+  specs:
+    fandango (1.0.0)
+      nokogiri (~> 1.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    awesome_print (1.7.0)
+    fakeweb (1.3.0)
+    mini_portile2 (2.1.0)
+    minitest (5.9.0)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    pkg-config (1.1.7)
+    rake (11.2.2)
+    vcr (3.0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  fakeweb
+  fandango!
+  minitest
+  rake
+  vcr
+
+BUNDLED WITH
+   1.11.2
