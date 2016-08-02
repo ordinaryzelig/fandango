@@ -33,3 +33,9 @@ The movies are an array of hashes. Each hash contains title and Fandango's id.
     # more hashes...
 ]
 ```
+
+## Development
+
+### Console
+
+Start IRB. There is .irbrc that will load code.
