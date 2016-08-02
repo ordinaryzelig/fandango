@@ -34,6 +34,12 @@ The movies are an array of hashes. Each hash contains title and Fandango's id.
 ]
 ```
 
+## Compatibility
+
+Development of this gem will only officially support Ruby versions 2.3.0. (see `.travis.yml`)
+It used to support 1.9.2. and 1.9.3, and it still may work, but it's not tested as of now.
+Contributions are very welcome, and I will do what I can to help.
+
 ## Development
 
 ### Console
