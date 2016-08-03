@@ -1,25 +1,12 @@
-require 'fandango/movie'
-
 module Fandango
   class Showtime
 
     class << self
 
-      def parse_all(html)
-        doc = Nokogiri.HTML(html)
-        doc.css('.showtimes-movie-container').map do |movie_node|
-          movie = MovieObj.parse(movie_node)
-          movie.showtimes =
-            movie_node.at_css('.showtimes-times').css('a').map do |showtime_node|
-              parse(showtime_node)
-            end
-          movie
-        end
-      end
-
       def parse(node)
         showtime = new
-        showtime.datetime = DateTime.parse(node.at_css('time').attr('datetime'))
+        datetime_str = node.at_css('time').attr('datetime')
+        showtime.datetime = DateTime.parse(datetime_str)
         showtime
       end
 

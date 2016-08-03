@@ -9,8 +9,8 @@ module Fandango
       response = request(postal_code)
       raise BadResponse.new(response) unless response.status.first == '200'
 
-      source = response.read
-      Parser.(source)
+      xml = response.read
+      Parser.(xml)
     end
 
     def request(postal_code)
@@ -23,8 +23,8 @@ module Fandango
 
       module_function
 
-      def call(source)
-        doc = Nokogiri.XML(source)
+      def call(xml)
+        doc = Nokogiri.XML(xml)
         doc.css('item').map do |item_node|
           Theater.parse(item_node)
         end

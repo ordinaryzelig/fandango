@@ -1,5 +1,6 @@
 module Fandango
-  autoload :MoviesNear, 'fandango/api/movies_near'
+  autoload :MoviesNear,       'fandango/api/movies_near'
+  autoload :TheaterShowtimes, 'fandango/api/theater_showtimes'
 
   module API
 
