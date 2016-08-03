@@ -3,16 +3,25 @@ module Fandango
 
     class << self
 
-      def parse(description_node)
-        description_node.css('li').map do |li|
-          movie = new
-          movie.title = parse_title(li)
-          movie.id    = parse_id(li)
-          movie
-        end
+      def parse(description_li)
+        Parser.(description_li)
       end
 
-    private
+    end
+
+    attr_accessor :title
+    attr_accessor :id
+
+    module Parser
+
+      module_function
+
+      def call(description_li)
+        movie = Movie.new
+        movie.title = parse_title(description_li)
+        movie.id    = parse_id(description_li)
+        movie
+      end
 
       def parse_title(li)
         li.at_css('a').content
@@ -24,9 +33,6 @@ module Fandango
       end
 
     end
-
-    attr_accessor :title
-    attr_accessor :id
 
   end
 end

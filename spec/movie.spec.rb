@@ -8,26 +8,17 @@ describe Fandango::Movie do
   specify '.parse parses RSS item into array of Movies' do
     xml = fixture_file_content('movies_near_me_73142.rss')
     cdata = Nokogiri.XML(xml).at_css('item').at_css('description')
-    description_node = Nokogiri.HTML(cdata.content)
-    movies = Fandango::Movie.parse(description_node)
+    description_li = Nokogiri.HTML(cdata.content).at_css('li')
 
-    movies.size.must_equal 36
+    movie = Fandango::Movie.parse(description_li)
 
-    movies_atts = movies[0, 3].map { |movie| {title: movie.title, id: movie.id} }
-    movies_atts.must_equal [
-      {
-        title: 'Abraham Lincoln: Vampire Hunter',
-        id:    '141897',
-      },
-      {
-        title: 'The Amazing Spider-Man 3D',
-        id:    '141122',
-      },
-      {
-        title: 'The Amazing Spider-Man',
-        id:    '126975',
-      },
-    ]
+    movies_atts = %i[title id].each_with_object({}) do |att, atts|
+      atts[att] = movie.public_send(att)
+    end
+    movies_atts.must_equal(
+      title: 'Abraham Lincoln: Vampire Hunter',
+      id:    '141897',
+    )
   end
 
 end
