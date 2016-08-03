@@ -1,3 +1,5 @@
+require 'fandango/movie'
+
 module Fandango
   class Showtime
 
@@ -13,23 +15,6 @@ module Fandango
     end
 
     attr_accessor :datetime
-
-  end
-
-  class MovieObj
-
-    class << self
-
-      def parse(movie_node)
-        movie = new
-        movie.title = movie_node.at_css('.showtimes-movie-title').content
-        movie
-      end
-
-    end
-
-    attr_accessor :title
-    attr_accessor :showtimes
 
   end
 end

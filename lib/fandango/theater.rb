@@ -68,8 +68,8 @@ module Fandango
       end
 
       def parse_movies(description_node)
-        description_node.css('li').map do |li|
-          Movie.parse(li)
+        description_node.css('li a').map do |a_tag|
+          Movie.parse(a_tag)
         end
       end
 

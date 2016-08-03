@@ -3,33 +3,34 @@ module Fandango
 
     class << self
 
-      def parse(description_li)
-        Parser.(description_li)
+      def parse(a_tag)
+        Parser.(a_tag)
       end
 
     end
 
     attr_accessor :title
     attr_accessor :id
+    attr_accessor :showtimes
 
     module Parser
 
       module_function
 
-      def call(description_li)
+      def call(a_tag)
         movie = Movie.new
-        movie.title = parse_title(description_li)
-        movie.id    = parse_id(description_li)
+        movie.title = parse_title(a_tag)
+        movie.id    = parse_id(a_tag)
         movie
       end
 
-      def parse_title(li)
-        li.at_css('a').content
+      def parse_title(a_tag)
+        a_tag.content
       end
 
       # E.g. '141081' in fandango.com/the+adventures+of+tintin+3d_141081/movietimes
-      def parse_id(li)
-        li.at_css('a')['href'].match(%r{fandango\.com/.*_(?<id>\d+)/movietimes})[:id]
+      def parse_id(a_tag)
+        a_tag['href'].match(%r{fandango\.com/.*_(?<id>\d+)/})[:id]
       end
 
     end
