@@ -6,15 +6,29 @@ module Fandango
     class << self
 
       def parse(node)
-        showtime = new
-        datetime_str = node.at_css('time').attr('datetime')
-        showtime.datetime = DateTime.parse(datetime_str)
-        showtime
+        Parser.(node)
       end
 
     end
 
     attr_accessor :datetime
+
+    module Parser
+
+      module_function
+
+      def call(node)
+        showtime = Showtime.new
+        showtime.datetime = parse_datetime(node)
+        showtime
+      end
+
+      def parse_datetime(node)
+        datetime_str = node.at_css('time').attr('datetime')
+        DateTime.parse(datetime_str)
+      end
+
+    end
 
   end
 end
