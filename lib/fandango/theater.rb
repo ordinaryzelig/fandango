@@ -1,3 +1,5 @@
+require 'fandango/movie'
+
 module Fandango
   class Theater
 

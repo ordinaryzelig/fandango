@@ -1,5 +1,6 @@
 require_relative 'spec_helper'
 require          'support/fixture_helpers'
+require          'fandango/movie'
 
 describe Fandango::Movie do
 
