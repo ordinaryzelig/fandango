@@ -1,15 +1,14 @@
 module Fandango
-  module Movie
+  class Movie
 
     class << self
 
-      # Return array of movie attributes.
       def parse(description_node)
         description_node.css('li').map do |li|
-          {
-            title: parse_title(li),
-            id:    parse_id(li),
-          }
+          movie = new
+          movie.title = parse_title(li)
+          movie.id    = parse_id(li)
+          movie
         end
       end
 
@@ -25,6 +24,9 @@ module Fandango
       end
 
     end
+
+    attr_accessor :title
+    attr_accessor :id
 
   end
 end

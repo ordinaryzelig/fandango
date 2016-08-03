@@ -1,31 +1,35 @@
 module Fandango
-  module Theater
+  class Theater
 
     class << self
 
-      def initialize(entry)
-        @entry = entry
+      def parse(item_node)
+        theater = new
+
+        description_node = parse_description_node(item_node)
+
+        theater.name        = parse_name(item_node)
+        theater.id          = parse_id(item_node)
+        theater.address     = parse_address(description_node)
+        theater.postal_code = parse_postal_code(theater.address)
+        theater.movies      = Movie.parse(description_node)
+        theater
       end
 
-      def parse(item_node, description_node = nil)
-        description_node ||= Fandango::Parser.parse_description(item_node)
-        name        = parse_name(item_node)
-        id          = parse_id(item_node)
-        address     = parse_address(description_node)
-        postal_code = parse_postal_code(address)
+    private
 
-        {
-          name:        name,
-          id:          id,
-          address:     address,
-          postal_code: postal_code,
-        }
+      # Description content is in the form of HTML wrapped in CDATA.
+      # Parse it and return a parsed Nokogiri node.
+      def parse_description_node(item_node)
+        @description_node =
+          begin
+            cdata = item_node.at_css('description')
+            Nokogiri::HTML(cdata.content)
+          end
       end
-
-      private
 
       def parse_name(item_node)
-        item_node.at_css('title').content
+        item_node.at_css('title').content.strip
       end
 
       # E.g. 'aaicu' in http://www.fandango.com/northpark7_aaicu/theaterpage
@@ -45,6 +49,12 @@ module Fandango
       end
 
     end
+
+    attr_accessor :name
+    attr_accessor :id
+    attr_accessor :address
+    attr_accessor :postal_code
+    attr_accessor :movies
 
   end
 end

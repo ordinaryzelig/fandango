@@ -5,15 +5,15 @@ describe Fandango::Theater do
 
   include FixtureHelpers
 
-  specify '.parse parses RSS item into array of movie attribute hashes' do
-    item_node = item_node_from_fixture_file('item.html')
-    hash = Fandango::Theater.parse(item_node)
-    hash.must_equal({
-      name:        'AMC Quail Springs Mall 24',
-      id:          'aaktw',
-      address:     '2501 West Memorial Oklahoma City, OK 73134',
-      postal_code: '73134',
-    })
+  specify '.parse parses RSS item into Theater' do
+    xml = fixture_file_content('movies_near_me_73142.rss')
+    item_node = Nokogiri.XML(xml).at_css('item')
+    theater = Fandango::Theater.parse(item_node)
+
+    theater.name.must_equal        'AMC Quail Springs Mall 24'
+    theater.id.must_equal          'aaktw'
+    theater.address.must_equal     '2501 West Memorial Oklahoma City, OK 73134'
+    theater.postal_code.must_equal '73134'
   end
 
 end

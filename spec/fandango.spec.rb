@@ -8,16 +8,26 @@ describe Fandango do
 
   describe '.movies_near' do
 
-    it 'returns hash of theaters and movies playing at each' do
+    it 'returns Theaters and Movies playing at each' do
       VCR.use_cassette 'movies_near_me_73142' do
-        array = Fandango.movies_near(73142)
-        fixture_yaml = fixture_file_content('movies_near_me_73142.yaml')
-        array.to_yaml.must_equal fixture_yaml
+        theaters = Fandango.movies_near(73142)
+        theaters_hash = theaters.map do |theater|
+          {
+            name:        theater.name,
+            id:          theater.id,
+            address:     theater.address,
+            postal_code: theater.postal_code,
+            movies: theater.movies.map do |movie|
+              {
+                title: movie.title,
+                id:    movie.id,
+              }
+            end,
+          }
+        end
+        fixture_yaml = fixture_file_content('movies_near_me_73142.yml')
+        theaters_hash.to_yaml.must_equal fixture_yaml
       end
-    end
-
-    it 'raises error if postal code blank' do
-      proc { Fandango.movies_near('') }.must_raise(ArgumentError)
     end
 
     it 'raises error if status code is not 200' do
@@ -28,18 +38,6 @@ describe Fandango do
       end
     end
 
-  end
-
-  specify '.request makes http request and returns response' do
-    VCR.use_cassette 'movies_near_me_73142' do
-      source = Fandango.request(73142).read
-      fixture_source = fixture_file_content('movies_near_me_73142.rss').chomp
-      source.must_equal fixture_source
-    end
-  end
-
-  specify '.clean_postal_code removes spaces from postal code' do
-    Fandango.send(:clean_postal_code, 'ABC 123').must_equal 'ABC123'
   end
 
 end
