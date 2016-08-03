@@ -9,9 +9,9 @@ describe Fandango::Movie do
   specify '.parse parses RSS item into array of Movies' do
     xml = fixture_file_content('movies_near_me_73142.rss')
     cdata = Nokogiri.XML(xml).at_css('item').at_css('description')
-    a_tag = Nokogiri.HTML(cdata.content).at_css('li a')
+    li = Nokogiri.HTML(cdata.content).at_css('li')
 
-    movie = Fandango::Movie.parse(a_tag)
+    movie = Fandango::Movie.parse(li)
 
     movies_atts = %i[title id].each_with_object({}) do |att, atts|
       atts[att] = movie.public_send(att)

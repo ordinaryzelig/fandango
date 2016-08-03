@@ -24,7 +24,7 @@ module Fandango
       def call(html)
         doc = Nokogiri.HTML(html)
         doc.css('.showtimes-movie-container').map do |movie_node|
-          movie = Movie.parse(movie_node.at_css('a.showtimes-movie-title'))
+          movie = Movie.parse(movie_node)
           movie.showtimes =
             movie_node.at_css('.showtimes-times').css('a').map do |showtime_node|
               Showtime.parse(showtime_node)

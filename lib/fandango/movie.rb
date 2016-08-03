@@ -3,24 +3,29 @@ module Fandango
 
     class << self
 
-      def parse(a_tag)
-        Parser.(a_tag)
+      def parse(node)
+        Parser.(node)
       end
 
     end
 
     attr_accessor :title
     attr_accessor :id
+    attr_accessor :runtime
     attr_accessor :showtimes
 
     module Parser
 
       module_function
 
-      def call(a_tag)
+      def call(node)
         movie = Movie.new
-        movie.title = parse_title(a_tag)
-        movie.id    = parse_id(a_tag)
+
+        a_tag = node.at_css('a.showtimes-movie-title') || node.at_css('a')
+        movie.title   = parse_title(a_tag)
+        movie.id      = parse_id(a_tag)
+        movie.runtime = parse_runtime(node)
+
         movie
       end
 
@@ -31,6 +36,23 @@ module Fandango
       # E.g. '141081' in fandango.com/the+adventures+of+tintin+3d_141081/movietimes
       def parse_id(a_tag)
         a_tag['href'].match(%r{fandango\.com/.*_(?<id>\d+)/})[:id]
+      end
+
+      # <div class="showtimes-movie-rating-runtime">
+      # <!-- Display rating -->
+      # R , 
+      #   <!-- Display runtime -->
+      # 1 hr 41 min
+      # </div>
+      def parse_runtime(node)
+        if rating_runtime = node.at_css('.showtimes-movie-rating-runtime')
+          %r{(?<hour>\d+)\s+hr\s+(?<min>\d+)} =~ rating_runtime.content
+          begin
+            Integer(hour) * 60 + Integer(min)
+          rescue TypeError
+            #puts rating_runtime
+          end
+        end
       end
 
     end
