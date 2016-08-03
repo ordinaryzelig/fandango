@@ -15,6 +15,7 @@ module Fandango
     attr_accessor :id
     attr_accessor :address
     attr_accessor :postal_code
+    attr_accessor :showtimes_link
     attr_accessor :movies
 
     module Parser
@@ -26,11 +27,12 @@ module Fandango
 
         description_node = parse_description_node(item_node)
 
-        theater.name        = parse_name(item_node)
-        theater.id          = parse_id(item_node)
-        theater.address     = parse_address(description_node)
-        theater.postal_code = parse_postal_code(theater.address)
-        theater.movies      = parse_movies(description_node)
+        theater.name           = parse_name(item_node)
+        theater.id             = parse_id(item_node)
+        theater.address        = parse_address(description_node)
+        theater.postal_code    = parse_postal_code(theater.address)
+        theater.showtimes_link = parse_showtimes_link(item_node)
+        theater.movies         = parse_movies(description_node)
         theater
       end
 
@@ -59,6 +61,10 @@ module Fandango
 
       def parse_postal_code(address)
         address.match(/(?<postal_code>\d+)$/)[:postal_code]
+      end
+
+      def parse_showtimes_link(item_node)
+        item_node.at_css('link').content.strip
       end
 
       def parse_movies(description_node)
