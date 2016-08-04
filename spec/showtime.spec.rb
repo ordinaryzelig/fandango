@@ -2,7 +2,6 @@ require_relative 'spec_helper'
 require          'support/fixture_helpers'
 
 module Fandango
-
   describe Showtime do
 
     include FixtureHelpers
@@ -17,5 +16,4 @@ module Fandango
     end
 
   end
-
 end

@@ -11,13 +11,4 @@ module FixtureHelpers
     fixture_file(file_name).read
   end
 
-  def item_node_from_fixture_file(file_name)
-    item_html = fixture_file_content('item.html')
-    Nokogiri.XML(item_html).at_css('item')
-  end
-
-  def description_node_from_fixture_file(file_name)
-    Fandango::Parser.parse_description(item_node_from_fixture_file(file_name))
-  end
-
 end
