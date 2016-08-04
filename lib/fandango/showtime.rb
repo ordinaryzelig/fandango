@@ -9,6 +9,7 @@ module Fandango
 
     end
 
+    attr_accessor :movie
     attr_accessor :datetime
 
     module Parser

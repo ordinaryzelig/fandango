@@ -12,8 +12,24 @@ describe Fandango::TheaterShowtimes do
 
       movies = Fandango.theater_showtimes(url)
 
+      movies_yaml =
+        movies.map do |movie|
+          {
+            title:     movie.title,
+            id:        movie.id,
+            runtime:   movie.runtime,
+            showtimes: movie.showtimes.map do |showtime|
+              {
+                movie_id: showtime.movie.id,
+                datetime: showtime.datetime,
+              }
+            end
+          }
+        end
+        .to_yaml
+
       fixture_yaml = fixture_file_content('theater_showtimes_amcquailspringsmall24.yml')
-      movies.to_yaml.must_equal fixture_yaml
+      movies_yaml.must_equal fixture_yaml
     end
   end
 

@@ -12,7 +12,15 @@ module Fandango
     attr_accessor :title
     attr_accessor :id
     attr_accessor :runtime
-    attr_accessor :showtimes
+    attr_reader   :showtimes
+
+    def showtimes=(_showtimes)
+      @showtimes = _showtimes
+      @showtimes.each do |showtime|
+        showtime.movie = self
+      end
+      showtimes
+    end
 
     module Parser
 

@@ -1,333 +1,309 @@
 ---
-- !ruby/object:Fandango::Movie
-  title: Bad Moms
-  id: '191125'
-  runtime: 101
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:30:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 12:35:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 14:05:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 15:10:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:40:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:30:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 22:00:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Jason Bourne
-  id: '190367'
-  runtime: 123
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 12:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 14:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 15:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 17:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 17:45:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 18:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 20:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 20:30:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 22:00:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Nerve
-  id: '192705'
-  runtime: 96
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:50:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 14:30:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 17:05:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:40:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 22:05:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Absolutely Fabulous
-  id: '187674'
-  runtime: 
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:20:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:50:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:25:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 18:50:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:30:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: 'Ice Age: Collision Course 3D'
-  id: '188285'
-  runtime: 94
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:50:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 14:15:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:45:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: 'Ice Age: Collision Course'
-  id: '188285'
-  runtime: 94
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:15:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 15:45:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 18:15:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:05:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Lights Out
-  id: '148574'
-  runtime: 81
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:05:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:25:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 15:35:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 17:50:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 20:05:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 22:15:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: 'Star Trek Beyond: An IMAX 3D Experience'
-  id: '188462'
-  runtime: 122
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:10:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:10:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:10:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 22:10:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Star Trek Beyond 3D
-  id: '188462'
-  runtime: 122
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:40:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 14:40:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 17:40:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 20:40:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Star Trek Beyond
-  id: '188462'
-  runtime: 122
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:00:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 12:25:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 15:25:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 18:25:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:55:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:25:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Café Society
-  id: '192162'
-  runtime: 96
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:35:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 14:10:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:45:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:15:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:45:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Ghostbusters 3D
-  id: '140163'
-  runtime: 
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 12:05:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 18:10:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Ghostbusters (2016)
-  id: '140163'
-  runtime: 107
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:20:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:20:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:20:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 22:05:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: 'Hillary''s America: The Secret History of the Democratic Party'
-  id: '193778'
-  runtime: 107
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 12:50:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 15:40:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 18:35:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:35:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: The Infiltrator
-  id: '191461'
-  runtime: 127
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 15:05:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:20:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Captain Fantastic
-  id: '190420'
-  runtime: 119
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:30:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:35:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:25:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 22:15:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Mike & Dave Need Wedding Dates
-  id: '188459'
-  runtime: 98
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 12:55:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 15:30:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 18:20:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:10:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: The Secret Life of Pets
-  id: '184804'
-  runtime: 90
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:15:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 12:15:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:45:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 14:45:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:15:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 18:45:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:50:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:15:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: The BFG
-  id: '188457'
-  runtime: 117
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:55:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:55:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: The Legend of Tarzan
-  id: '187791'
-  runtime: 
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 12:45:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 15:35:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 18:30:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:10:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: 'Independence Day: Resurgence'
-  id: '165895'
-  runtime: 120
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:50:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 22:10:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: The Shallows
-  id: '185717'
-  runtime: 87
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 21:50:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Central Intelligence
-  id: '185755'
-  runtime: 117
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 17:15:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 22:15:00.000000000 -05:00
-- !ruby/object:Fandango::Movie
-  title: Finding Dory
-  id: '164333'
-  runtime: 103
-  showtimes:
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 11:05:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 13:40:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 16:30:00.000000000 -05:00
-  - !ruby/object:Fandango::Showtime
-    datetime: !ruby/object:DateTime 2016-08-02 19:05:00.000000000 -05:00
+- :title: Bad Moms
+  :id: '191125'
+  :runtime: 101
+  :showtimes:
+  - :movie_id: '191125'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:30:00.000000000 -05:00
+  - :movie_id: '191125'
+    :datetime: !ruby/object:DateTime 2016-08-02 12:35:00.000000000 -05:00
+  - :movie_id: '191125'
+    :datetime: !ruby/object:DateTime 2016-08-02 14:05:00.000000000 -05:00
+  - :movie_id: '191125'
+    :datetime: !ruby/object:DateTime 2016-08-02 15:10:00.000000000 -05:00
+  - :movie_id: '191125'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:40:00.000000000 -05:00
+  - :movie_id: '191125'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:30:00.000000000 -05:00
+  - :movie_id: '191125'
+    :datetime: !ruby/object:DateTime 2016-08-02 22:00:00.000000000 -05:00
+- :title: Jason Bourne
+  :id: '190367'
+  :runtime: 123
+  :showtimes:
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 12:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 14:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 15:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 17:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 17:45:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 18:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 20:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 20:30:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:00:00.000000000 -05:00
+  - :movie_id: '190367'
+    :datetime: !ruby/object:DateTime 2016-08-02 22:00:00.000000000 -05:00
+- :title: Nerve
+  :id: '192705'
+  :runtime: 96
+  :showtimes:
+  - :movie_id: '192705'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:50:00.000000000 -05:00
+  - :movie_id: '192705'
+    :datetime: !ruby/object:DateTime 2016-08-02 14:30:00.000000000 -05:00
+  - :movie_id: '192705'
+    :datetime: !ruby/object:DateTime 2016-08-02 17:05:00.000000000 -05:00
+  - :movie_id: '192705'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:40:00.000000000 -05:00
+  - :movie_id: '192705'
+    :datetime: !ruby/object:DateTime 2016-08-02 22:05:00.000000000 -05:00
+- :title: Absolutely Fabulous
+  :id: '187674'
+  :runtime: 
+  :showtimes:
+  - :movie_id: '187674'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:20:00.000000000 -05:00
+  - :movie_id: '187674'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:50:00.000000000 -05:00
+  - :movie_id: '187674'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:25:00.000000000 -05:00
+  - :movie_id: '187674'
+    :datetime: !ruby/object:DateTime 2016-08-02 18:50:00.000000000 -05:00
+  - :movie_id: '187674'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:30:00.000000000 -05:00
+- :title: 'Ice Age: Collision Course 3D'
+  :id: '188285'
+  :runtime: 94
+  :showtimes:
+  - :movie_id: '188285'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:50:00.000000000 -05:00
+  - :movie_id: '188285'
+    :datetime: !ruby/object:DateTime 2016-08-02 14:15:00.000000000 -05:00
+  - :movie_id: '188285'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:45:00.000000000 -05:00
+- :title: 'Ice Age: Collision Course'
+  :id: '188285'
+  :runtime: 94
+  :showtimes:
+  - :movie_id: '188285'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:15:00.000000000 -05:00
+  - :movie_id: '188285'
+    :datetime: !ruby/object:DateTime 2016-08-02 15:45:00.000000000 -05:00
+  - :movie_id: '188285'
+    :datetime: !ruby/object:DateTime 2016-08-02 18:15:00.000000000 -05:00
+  - :movie_id: '188285'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:05:00.000000000 -05:00
+- :title: Lights Out
+  :id: '148574'
+  :runtime: 81
+  :showtimes:
+  - :movie_id: '148574'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:05:00.000000000 -05:00
+  - :movie_id: '148574'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:25:00.000000000 -05:00
+  - :movie_id: '148574'
+    :datetime: !ruby/object:DateTime 2016-08-02 15:35:00.000000000 -05:00
+  - :movie_id: '148574'
+    :datetime: !ruby/object:DateTime 2016-08-02 17:50:00.000000000 -05:00
+  - :movie_id: '148574'
+    :datetime: !ruby/object:DateTime 2016-08-02 20:05:00.000000000 -05:00
+  - :movie_id: '148574'
+    :datetime: !ruby/object:DateTime 2016-08-02 22:15:00.000000000 -05:00
+- :title: 'Star Trek Beyond: An IMAX 3D Experience'
+  :id: '188462'
+  :runtime: 122
+  :showtimes:
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:10:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:10:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:10:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 22:10:00.000000000 -05:00
+- :title: Star Trek Beyond 3D
+  :id: '188462'
+  :runtime: 122
+  :showtimes:
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:40:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 14:40:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 17:40:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 20:40:00.000000000 -05:00
+- :title: Star Trek Beyond
+  :id: '188462'
+  :runtime: 122
+  :showtimes:
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:00:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 12:25:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 15:25:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 18:25:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:55:00.000000000 -05:00
+  - :movie_id: '188462'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:25:00.000000000 -05:00
+- :title: Café Society
+  :id: '192162'
+  :runtime: 96
+  :showtimes:
+  - :movie_id: '192162'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:35:00.000000000 -05:00
+  - :movie_id: '192162'
+    :datetime: !ruby/object:DateTime 2016-08-02 14:10:00.000000000 -05:00
+  - :movie_id: '192162'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:45:00.000000000 -05:00
+  - :movie_id: '192162'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:15:00.000000000 -05:00
+  - :movie_id: '192162'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:45:00.000000000 -05:00
+- :title: Ghostbusters 3D
+  :id: '140163'
+  :runtime: 
+  :showtimes:
+  - :movie_id: '140163'
+    :datetime: !ruby/object:DateTime 2016-08-02 12:05:00.000000000 -05:00
+  - :movie_id: '140163'
+    :datetime: !ruby/object:DateTime 2016-08-02 18:10:00.000000000 -05:00
+- :title: Ghostbusters (2016)
+  :id: '140163'
+  :runtime: 107
+  :showtimes:
+  - :movie_id: '140163'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:20:00.000000000 -05:00
+  - :movie_id: '140163'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:20:00.000000000 -05:00
+  - :movie_id: '140163'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:20:00.000000000 -05:00
+  - :movie_id: '140163'
+    :datetime: !ruby/object:DateTime 2016-08-02 22:05:00.000000000 -05:00
+- :title: 'Hillary''s America: The Secret History of the Democratic Party'
+  :id: '193778'
+  :runtime: 107
+  :showtimes:
+  - :movie_id: '193778'
+    :datetime: !ruby/object:DateTime 2016-08-02 12:50:00.000000000 -05:00
+  - :movie_id: '193778'
+    :datetime: !ruby/object:DateTime 2016-08-02 15:40:00.000000000 -05:00
+  - :movie_id: '193778'
+    :datetime: !ruby/object:DateTime 2016-08-02 18:35:00.000000000 -05:00
+  - :movie_id: '193778'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:35:00.000000000 -05:00
+- :title: The Infiltrator
+  :id: '191461'
+  :runtime: 127
+  :showtimes:
+  - :movie_id: '191461'
+    :datetime: !ruby/object:DateTime 2016-08-02 15:05:00.000000000 -05:00
+  - :movie_id: '191461'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:20:00.000000000 -05:00
+- :title: Captain Fantastic
+  :id: '190420'
+  :runtime: 119
+  :showtimes:
+  - :movie_id: '190420'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:30:00.000000000 -05:00
+  - :movie_id: '190420'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:35:00.000000000 -05:00
+  - :movie_id: '190420'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:25:00.000000000 -05:00
+  - :movie_id: '190420'
+    :datetime: !ruby/object:DateTime 2016-08-02 22:15:00.000000000 -05:00
+- :title: Mike & Dave Need Wedding Dates
+  :id: '188459'
+  :runtime: 98
+  :showtimes:
+  - :movie_id: '188459'
+    :datetime: !ruby/object:DateTime 2016-08-02 12:55:00.000000000 -05:00
+  - :movie_id: '188459'
+    :datetime: !ruby/object:DateTime 2016-08-02 15:30:00.000000000 -05:00
+  - :movie_id: '188459'
+    :datetime: !ruby/object:DateTime 2016-08-02 18:20:00.000000000 -05:00
+  - :movie_id: '188459'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:10:00.000000000 -05:00
+- :title: The Secret Life of Pets
+  :id: '184804'
+  :runtime: 90
+  :showtimes:
+  - :movie_id: '184804'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:15:00.000000000 -05:00
+  - :movie_id: '184804'
+    :datetime: !ruby/object:DateTime 2016-08-02 12:15:00.000000000 -05:00
+  - :movie_id: '184804'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:45:00.000000000 -05:00
+  - :movie_id: '184804'
+    :datetime: !ruby/object:DateTime 2016-08-02 14:45:00.000000000 -05:00
+  - :movie_id: '184804'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:15:00.000000000 -05:00
+  - :movie_id: '184804'
+    :datetime: !ruby/object:DateTime 2016-08-02 18:45:00.000000000 -05:00
+  - :movie_id: '184804'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:50:00.000000000 -05:00
+  - :movie_id: '184804'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:15:00.000000000 -05:00
+- :title: The BFG
+  :id: '188457'
+  :runtime: 117
+  :showtimes:
+  - :movie_id: '188457'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:55:00.000000000 -05:00
+  - :movie_id: '188457'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:55:00.000000000 -05:00
+- :title: The Legend of Tarzan
+  :id: '187791'
+  :runtime: 
+  :showtimes:
+  - :movie_id: '187791'
+    :datetime: !ruby/object:DateTime 2016-08-02 12:45:00.000000000 -05:00
+  - :movie_id: '187791'
+    :datetime: !ruby/object:DateTime 2016-08-02 15:35:00.000000000 -05:00
+  - :movie_id: '187791'
+    :datetime: !ruby/object:DateTime 2016-08-02 18:30:00.000000000 -05:00
+  - :movie_id: '187791'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:10:00.000000000 -05:00
+- :title: 'Independence Day: Resurgence'
+  :id: '165895'
+  :runtime: 120
+  :showtimes:
+  - :movie_id: '165895'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:50:00.000000000 -05:00
+  - :movie_id: '165895'
+    :datetime: !ruby/object:DateTime 2016-08-02 22:10:00.000000000 -05:00
+- :title: The Shallows
+  :id: '185717'
+  :runtime: 87
+  :showtimes:
+  - :movie_id: '185717'
+    :datetime: !ruby/object:DateTime 2016-08-02 21:50:00.000000000 -05:00
+- :title: Central Intelligence
+  :id: '185755'
+  :runtime: 117
+  :showtimes:
+  - :movie_id: '185755'
+    :datetime: !ruby/object:DateTime 2016-08-02 17:15:00.000000000 -05:00
+  - :movie_id: '185755'
+    :datetime: !ruby/object:DateTime 2016-08-02 22:15:00.000000000 -05:00
+- :title: Finding Dory
+  :id: '164333'
+  :runtime: 103
+  :showtimes:
+  - :movie_id: '164333'
+    :datetime: !ruby/object:DateTime 2016-08-02 11:05:00.000000000 -05:00
+  - :movie_id: '164333'
+    :datetime: !ruby/object:DateTime 2016-08-02 13:40:00.000000000 -05:00
+  - :movie_id: '164333'
+    :datetime: !ruby/object:DateTime 2016-08-02 16:30:00.000000000 -05:00
+  - :movie_id: '164333'
+    :datetime: !ruby/object:DateTime 2016-08-02 19:05:00.000000000 -05:00
