@@ -1,5 +1,3 @@
-require 'fandango/showtime'
-
 module Fandango
   module TheaterShowtimes
 

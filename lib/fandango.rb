@@ -5,6 +5,10 @@ require 'nokogiri'
 
 require 'fandango/api'
 
+require 'fandango/theater'
+require 'fandango/movie'
+require 'fandango/showtime'
+
 module Fandango
 
   module_function

@@ -1,5 +1,3 @@
-require 'fandango/movie'
-
 module Fandango
   class Showtime
 

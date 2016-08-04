@@ -1,5 +1,3 @@
-require 'fandango/theater'
-
 module Fandango
   module MoviesNear
 
