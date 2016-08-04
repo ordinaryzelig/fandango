@@ -33,7 +33,7 @@ module Fandango
         end
       end
 
-      end
+    end
 
   end
 
