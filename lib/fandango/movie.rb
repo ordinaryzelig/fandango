@@ -19,7 +19,7 @@ module Fandango
       @showtimes.each do |showtime|
         showtime.movie = self
       end
-      showtimes
+      @showtimes
     end
 
     module Parser
