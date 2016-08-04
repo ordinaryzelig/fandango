@@ -14,8 +14,6 @@ module Fandango
       showtime = Showtime.parse(node)
 
       showtime.datetime.must_equal DateTime.parse('2016-08-01T11:30:00-05:00')
-      #fixture_yaml = fixture_file_content('showtimes_amcquailspringsmall24_aaktw_2016_08_01.yml')
-      #movies.to_yaml.must_equal fixture_yaml
     end
 
   end
