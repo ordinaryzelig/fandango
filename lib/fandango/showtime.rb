@@ -3,6 +3,8 @@ module Fandango
 
     PREVIEW_MINUTES = 20
 
+    include Comparable
+
     class << self
 
       def parse(node)
@@ -20,6 +22,12 @@ module Fandango
 
     def feature_end_time
       feature_start_time + movie.runtime.to_f / 24 / 60
+    end
+
+  protected
+
+    def <=>(showtime)
+      datetime <=> showtime.datetime
     end
 
     module Parser
