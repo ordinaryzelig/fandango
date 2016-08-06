@@ -22,6 +22,10 @@ module Fandango
       @showtimes
     end
 
+    def next_showtime(datetime)
+      showtimes.detect { |st| datetime < st.datetime }
+    end
+
     module Parser
 
       module_function
