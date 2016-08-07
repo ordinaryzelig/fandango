@@ -4,50 +4,73 @@ module Fandango
   class CLI
 
     HTML = File.read('spec/support/fixtures/showtimes_amcquailspringsmall24_aaktw_2016_08_01.html')
-    #MOVIES = TheaterShowtimes::Parser.(HTML)
-    MOVIES = [
-      {
-        title: 'Cafe Society',
-        runtime: 96,
-        showtimes: ['14:10'],
-      },
-      {
-        title: 'Jason Bourne',
-        runtime: 123,
-        showtimes: ['15:00', '16:00', '17:00'],
-      },
-      {
-        title: 'Star Trek',
-        runtime: 122,
-        showtimes: ['17:30', '18:25'],
-      },
-    ].map do |atts|
-      movie = Movie.new
-      movie.title = atts.fetch(:title)
-      movie.runtime = atts.fetch(:runtime)
-      movie.showtimes = atts.fetch(:showtimes).map do |time|
-        showtime = Showtime.new
-        showtime.datetime = DateTime.parse(time)
-        showtime
-      end
-      movie
-    end
+    MOVIES = TheaterShowtimes::Parser.(HTML)
+    #MOVIES = [
+      #{
+        #title: 'Cafe Society',
+        #runtime: 96,
+        #showtimes: ['14:10'],
+      #},
+      #{
+        #title: 'Jason Bourne',
+        #runtime: 123,
+        #showtimes: ['15:00', '16:00', '17:00'],
+      #},
+      #{
+        #title: 'Star Trek',
+        #runtime: 122,
+        #showtimes: ['17:30', '18:25'],
+      #},
+    #].map do |atts|
+      #movie = Movie.new
+      #movie.title = atts.fetch(:title)
+      #movie.runtime = atts.fetch(:runtime)
+      #movie.showtimes = atts.fetch(:showtimes).map do |time|
+        #showtime = Showtime.new
+        #showtime.datetime = DateTime.parse(time)
+        #showtime
+      #end
+      #movie
+    #end
 
     def initialize
-      @movies_left = MOVIES.dup
+      @all_movies = MOVIES
+      @selected_movies_idx = []
       @selected_showtimes = []
     end
 
     def run
       print_all
+      select_movies
+      select_showtimes
+    end
 
-      while @movies_left.any?
+  private
+
+    def select_movies
+      loop do
+        @all_movies.each_with_index do |movie, idx|
+          puts "[#{@selected_movies_idx.include?(idx) ? '*' : ' '}] #{idx + 1}. #{movie.title}"
+        end
+
+        input = gets.chomp
+        break if input.empty?
+
+        idx = Integer(input) - 1
+        unless @selected_movies_idx.delete(idx)
+          @selected_movies_idx << idx
+        end
+      end
+    end
+
+    def select_showtimes
+      while movies_left.any?
         showtimes = next_showtimes
         break if showtimes.empty?
 
         showtime = prompt_for_showtime(showtimes)
         @selected_showtimes << showtime
-        @movies_left.delete(showtime.movie)
+        movies_left.delete(showtime.movie)
         puts
       end
 
@@ -56,7 +79,9 @@ module Fandango
       end
     end
 
-  private
+    def movies_left
+      @movies_left ||= @all_movies.values_at(*@selected_movies_idx)
+    end
 
     def prompt_for_showtime(showtimes)
       puts "Pick a movie:"
@@ -70,7 +95,7 @@ module Fandango
     end
 
     def next_showtimes
-      @movies_left
+      movies_left
         .map do |movie|
           movie.next_showtime(next_earliest_start_datetime)
         end
@@ -100,7 +125,7 @@ module Fandango
     end
 
     def print_all
-      @movies_left.each do |movie|
+      @all_movies.each do |movie|
         puts "#{movie.title} (#{movie.runtime}m)"
         puts movie
           .showtimes
