@@ -23,7 +23,7 @@ module Fandango
     end
 
     def next_showtime(datetime)
-      showtimes.detect { |st| datetime < st.datetime }
+      showtimes.detect { |st| datetime < st.feature_start_time }
     end
 
     module Parser

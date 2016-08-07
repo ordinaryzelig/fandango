@@ -4,7 +4,34 @@ module Fandango
   class CLI
 
     HTML = File.read('spec/support/fixtures/showtimes_amcquailspringsmall24_aaktw_2016_08_01.html')
-    MOVIES = TheaterShowtimes::Parser.(HTML)
+    #MOVIES = TheaterShowtimes::Parser.(HTML)
+    MOVIES = [
+      {
+        title: 'Cafe Society',
+        runtime: 96,
+        showtimes: ['14:10'],
+      },
+      {
+        title: 'Jason Bourne',
+        runtime: 123,
+        showtimes: ['15:00', '16:00', '17:00'],
+      },
+      {
+        title: 'Star Trek',
+        runtime: 122,
+        showtimes: ['17:30', '18:25'],
+      },
+    ].map do |atts|
+      movie = Movie.new
+      movie.title = atts.fetch(:title)
+      movie.runtime = atts.fetch(:runtime)
+      movie.showtimes = atts.fetch(:showtimes).map do |time|
+        showtime = Showtime.new
+        showtime.datetime = DateTime.parse(time)
+        showtime
+      end
+      movie
+    end
 
     def initialize
       @movies_left = MOVIES.dup
@@ -12,8 +39,13 @@ module Fandango
     end
 
     def run
-      while @movies_left.any? && next_showtimes.any?
-        showtime = prompt_for_showtime
+      print_all
+
+      while @movies_left.any?
+        showtimes = next_showtimes
+        break if showtimes.empty?
+
+        showtime = prompt_for_showtime(showtimes)
         @selected_showtimes << showtime
         @movies_left.delete(showtime.movie)
         puts
@@ -26,10 +58,9 @@ module Fandango
 
   private
 
-    def prompt_for_showtime
-      showtimes = next_showtimes
-
+    def prompt_for_showtime(showtimes)
       puts "Pick a movie:"
+
       showtimes.each_with_index do |showtime, idx|
         puts "#{idx + 1}. #{formatted_showtime(showtime)}"
       end
@@ -66,6 +97,17 @@ module Fandango
 
     def formatted_showtime(showtime)
       "#{l(showtime.datetime)} #{showtime.movie.title}"
+    end
+
+    def print_all
+      @movies_left.each do |movie|
+        puts "#{movie.title} (#{movie.runtime}m)"
+        puts movie
+          .showtimes
+          .map { |st| l(st.datetime) }
+          .join(' ,')
+        puts
+      end
     end
 
   end

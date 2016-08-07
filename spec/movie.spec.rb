@@ -43,6 +43,16 @@ module Fandango
         next_showtime.datetime.must_equal DateTime.new(2016, 8, 6, 12)
       end
 
+      it 'returns the next possible Showtime, disregarding assumed preview times' do
+        showtime = Showtime.new
+        showtime.datetime = DateTime.new(2016, 8, 6, 12)
+        movie = Movie.new
+        movie.showtimes = [showtime]
+
+        next_showtime = movie.next_showtime(showtime.datetime)
+        next_showtime.must_equal showtime
+      end
+
     end
 
   end
