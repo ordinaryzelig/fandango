@@ -9,23 +9,9 @@ module Fandango
 
     it 'returns Theaters and Movies playing at each' do
       VCR.use_cassette 'movies_near_me_73142' do
-        theaters = Fandango.movies_near(73142)
-        theaters_hash = theaters.map do |theater|
-          {
-            name:        theater.name,
-            id:          theater.id,
-            address:     theater.address,
-            postal_code: theater.postal_code,
-            movies: theater.movies.map do |movie|
-              {
-                title: movie.title,
-                id:    movie.id,
-              }
-            end,
-          }
-        end
+        result = Fandango.movies_near(73142)
         fixture_yaml = fixture_file_content('movies_near_me_73142.yml')
-        theaters_hash.to_yaml.must_equal fixture_yaml
+        result.to_yaml.must_equal fixture_yaml
       end
     end
 

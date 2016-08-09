@@ -3,6 +3,7 @@
   :id: aaktw
   :address: 2501 West Memorial Oklahoma City, OK 73134
   :postal_code: '73134'
+  :showtimes_link: http://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123
   :movies:
   - :title: 'Abraham Lincoln: Vampire Hunter'
     :id: '141897'
@@ -80,6 +81,7 @@
   :id: aaicu
   :address: 12100 N. May Ave Oklahoma City, OK 73120
   :postal_code: '73120'
+  :showtimes_link: http://www.fandango.com/northpark7_aaicu/theaterpage?wssaffid=11836&wssac=123
   :movies:
   - :title: 21 Jump Street
     :id: '131465'
@@ -105,6 +107,7 @@
   :id: aagtg
   :address: 1901 NW Expressway Oklahoma City, OK 73118
   :postal_code: '73118'
+  :showtimes_link: http://www.fandango.com/dickinsonpennsquare10_aagtg/theaterpage?wssaffid=11836&wssac=123
   :movies:
   - :title: Battleship
     :id: '130096'
@@ -128,6 +131,7 @@
   :id: aavud
   :address: 4623 A. N.W. 23rd St. Oklahoma City, OK 73127
   :postal_code: '73127'
+  :showtimes_link: http://www.fandango.com/bandbtheatreswindsor10_aavud/theaterpage?wssaffid=11836&wssac=123
   :movies:
   - :title: Battleship
     :id: '130096'
@@ -151,11 +155,13 @@
   :id: aaenx
   :address: 1225 East Danforth Rd Edmond, OK 73083
   :postal_code: '73083'
+  :showtimes_link: http://www.fandango.com/kickingbirdcinema_aaenx/theaterpage?wssaffid=11836&wssac=123
   :movies: []
 - :name: Cinemark Tinseltown
   :id: aaitg
   :address: 6001 Martin Luther King Blvd. Oklahoma City, OK 73111
   :postal_code: '73111'
+  :showtimes_link: http://www.fandango.com/cinemarktinseltown_aaitg/theaterpage?wssaffid=11836&wssac=123
   :movies:
   - :title: The Amazing Spider-Man 3D
     :id: '141122'
@@ -261,6 +267,7 @@
   :id: aaict
   :address: 1219 Garth Brooks Rd. Yukon, OK 73099
   :postal_code: '73099'
+  :showtimes_link: http://www.fandango.com/yukonmovies5_aaict/theaterpage?wssaffid=11836&wssac=123
   :movies:
   - :title: Battleship
     :id: '130096'
@@ -274,6 +281,7 @@
   :id: aaopy
   :address: 2100 NE 52nd Street Oklahoma City, OK 73111
   :postal_code: '73111'
+  :showtimes_link: http://www.fandango.com/omnidometheatre_aaopy/theaterpage?wssaffid=11836&wssac=123
   :movies:
   - :title: Tornado Alley
     :id: '140948'
@@ -281,6 +289,7 @@
   :id: aauol
   :address: 12825 NW 10th Yukon, OK 73099
   :postal_code: '73099'
+  :showtimes_link: http://www.fandango.com/dickinsonwestendpointe8theatre_aauol/theaterpage?wssaffid=11836&wssac=123
   :movies:
   - :title: 21 Jump Street
     :id: '131465'
@@ -304,6 +313,7 @@
   :id: aaswz
   :address: 150 East Reno Ave. Oklahoma City, OK 73104
   :postal_code: '73104'
+  :showtimes_link: http://www.fandango.com/harkinscinecapribricktown_aaswz/theaterpage?wssaffid=11836&wssac=123
   :movies:
   - :title: Battleship
     :id: '130096'
@@ -335,4 +345,5 @@
   :id: aaqbg
   :address: 3000 S. Douglas Ave. Oklahoma City, OK 73109
   :postal_code: '73109'
+  :showtimes_link: http://www.fandango.com/aafesbasetheatre_aaqbg/theaterpage?wssaffid=11836&wssac=123
   :movies: []

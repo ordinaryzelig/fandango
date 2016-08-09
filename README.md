@@ -6,12 +6,7 @@ Uses Fandango's RSS moviesnearme feed. E.g. http://www.fandango.com/rss/moviesne
 
 ## Usage
 
-`Fandango.movies_near(73142)` returns an array of hashes.
-Each hash has 2 items: theater info and movies on sale at that theater.
-A theater is a hash of data containing: name, Fandango's theater id, address, and postal code.
-The movies are an array of hashes. Each hash contains title and Fandango's id.
-
-### Example output format
+`Fandango.movies_near(73142)`
 
 ```
 [

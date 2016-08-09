@@ -5,5 +5,5 @@ require 'fandango'
 
 $LOAD_PATH.unshift __dir__
 
-require 'minitest/autorun'
-require 'minitest/spec'
+require 'support/minitest'
+require 'awesome_print'

@@ -1,76 +1,58 @@
 module Fandango
-  class Theater
+  module Theater
 
-    class << self
+    module_function
 
-      def parse(item_node)
-        Parser.(item_node)
-      end
+    def parse(item_node)
+      hash = {}
 
+      description_node = parse_description_node(item_node)
+
+      hash[:name]           = parse_name(item_node)
+      hash[:id]             = parse_id(item_node)
+      hash[:address]        = parse_address(description_node)
+      hash[:postal_code]    = parse_postal_code(hash[:address])
+      hash[:showtimes_link] = parse_showtimes_link(item_node)
+      hash[:movies]         = parse_movies(description_node)
+
+      hash
     end
 
-    attr_accessor :name
-    attr_accessor :id
-    attr_accessor :address
-    attr_accessor :postal_code
-    attr_accessor :showtimes_link
-    attr_accessor :movies
+    # Description content is in the form of HTML wrapped in CDATA.
+    # Parse it and return a parsed Nokogiri node.
+    def parse_description_node(item_node)
+      cdata = item_node.at_css('description')
+      Nokogiri::HTML(cdata.content)
+    end
 
-    module Parser
+    def parse_name(item_node)
+      item_node.at_css('title').content.strip
+    end
 
-      module_function
+    # E.g. 'aaicu' in http://www.fandango.com/northpark7_aaicu/theaterpage
+    def parse_id(item_node)
+      item_node.
+        at_css('link').
+        content.
+        match(%r{fandango\.com/.*_(?<id>.*)/theaterpage})[:id]
+    end
 
-      def call(item_node)
-        theater = Theater.new
+    def parse_address(description_node)
+      description_node.at_css('p').content
+    end
 
-        description_node = parse_description_node(item_node)
+    def parse_postal_code(address)
+      address.match(/(?<postal_code>\d+)$/)[:postal_code]
+    end
 
-        theater.name           = parse_name(item_node)
-        theater.id             = parse_id(item_node)
-        theater.address        = parse_address(description_node)
-        theater.postal_code    = parse_postal_code(theater.address)
-        theater.showtimes_link = parse_showtimes_link(item_node)
-        theater.movies         = parse_movies(description_node)
-        theater
+    def parse_showtimes_link(item_node)
+      item_node.at_css('link').content.strip
+    end
+
+    def parse_movies(description_node)
+      description_node.css('li').map do |li|
+        Movie.parse(li)
       end
-
-      # Description content is in the form of HTML wrapped in CDATA.
-      # Parse it and return a parsed Nokogiri node.
-      def parse_description_node(item_node)
-        cdata = item_node.at_css('description')
-        Nokogiri::HTML(cdata.content)
-      end
-
-      def parse_name(item_node)
-        item_node.at_css('title').content.strip
-      end
-
-      # E.g. 'aaicu' in http://www.fandango.com/northpark7_aaicu/theaterpage
-      def parse_id(item_node)
-        item_node.
-          at_css('link').
-          content.
-          match(%r{fandango\.com/.*_(?<id>.*)/theaterpage})[:id]
-      end
-
-      def parse_address(description_node)
-        description_node.at_css('p').content
-      end
-
-      def parse_postal_code(address)
-        address.match(/(?<postal_code>\d+)$/)[:postal_code]
-      end
-
-      def parse_showtimes_link(item_node)
-        item_node.at_css('link').content.strip
-      end
-
-      def parse_movies(description_node)
-        description_node.css('li').map do |li|
-          Movie.parse(li)
-        end
-      end
-
     end
 
   end
