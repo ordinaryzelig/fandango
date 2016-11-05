@@ -3,16 +3,16 @@ module Fandango
 
     module_function
 
-    def call(url)
-      response = request(url)
+    def call(showtimes_link)
+      response = request(showtimes_link)
       raise BadResponse.new(response) unless response.status.first == '200'
 
       html = response.read
       Parser.(html)
     end
 
-    def request(url)
-      open(url)
+    def request(showtimes_link)
+      open(showtimes_link)
     end
 
     module Parser

@@ -17,8 +17,8 @@ module Fandango
     MoviesNear.(postal_code)
   end
 
-  def theater_showtimes(theater_url)
-    TheaterShowtimes.(theater_url)
+  def theater_showtimes(showtimes_link)
+    TheaterShowtimes.(showtimes_link)
   end
 
 end
