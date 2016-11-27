@@ -5,11 +5,16 @@ module Fandango
 
     def parse(node)
       a_tag = node.at_css('a.showtimes-movie-title') || node.at_css('a')
-      {
+      hash = {
         title:   parse_title(a_tag),
         id:      parse_id(a_tag),
-        #runtime: parse_runtime(node),
       }
+
+      if a_tag.attr(:class)&.include?('showtimes-movie-title')
+        hash[:runtime] = parse_runtime(node)
+      end
+
+      hash
     end
 
     def parse_title(a_tag)
@@ -28,13 +33,12 @@ module Fandango
     # 1 hr 41 min
     # </div>
     def parse_runtime(node)
-      if rating_runtime = node.at_css('.showtimes-movie-rating-runtime')
-        %r{(?<hour>\d+)\s+hr\s+(?<min>\d+)} =~ rating_runtime.content
-        begin
-          Integer(hour) * 60 + Integer(min)
-        rescue TypeError
-          #puts rating_runtime
-        end
+      rating_runtime = node.at_css('.showtimes-movie-rating-runtime')
+      %r{(?<hour>\d+)\s+hr\s+(?<min>\d+)} =~ rating_runtime.content
+      begin
+        Integer(hour) * 60 + Integer(min)
+      rescue TypeError
+        #puts rating_runtime
       end
     end
 

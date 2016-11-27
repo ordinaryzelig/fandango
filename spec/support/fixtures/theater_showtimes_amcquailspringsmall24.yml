@@ -1,6 +1,7 @@
 ---
 - :title: Bad Moms
   :id: '191125'
+  :runtime: 101
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:30:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 12:35:00.000000000 -05:00
@@ -11,6 +12,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 22:00:00.000000000 -05:00
 - :title: Jason Bourne
   :id: '190367'
+  :runtime: 123
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:00:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 12:00:00.000000000 -05:00
@@ -28,6 +30,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 22:00:00.000000000 -05:00
 - :title: Nerve
   :id: '192705'
+  :runtime: 96
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:50:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 14:30:00.000000000 -05:00
@@ -36,6 +39,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 22:05:00.000000000 -05:00
 - :title: Absolutely Fabulous
   :id: '187674'
+  :runtime: 
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:20:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 13:50:00.000000000 -05:00
@@ -44,12 +48,14 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 21:30:00.000000000 -05:00
 - :title: 'Ice Age: Collision Course 3D'
   :id: '188285'
+  :runtime: 94
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:50:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 14:15:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 19:45:00.000000000 -05:00
 - :title: 'Ice Age: Collision Course'
   :id: '188285'
+  :runtime: 94
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 13:15:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 15:45:00.000000000 -05:00
@@ -57,6 +63,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 21:05:00.000000000 -05:00
 - :title: Lights Out
   :id: '148574'
+  :runtime: 81
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:05:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 13:25:00.000000000 -05:00
@@ -66,6 +73,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 22:15:00.000000000 -05:00
 - :title: 'Star Trek Beyond: An IMAX 3D Experience'
   :id: '188462'
+  :runtime: 122
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 13:10:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 16:10:00.000000000 -05:00
@@ -73,6 +81,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 22:10:00.000000000 -05:00
 - :title: Star Trek Beyond 3D
   :id: '188462'
+  :runtime: 122
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:40:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 14:40:00.000000000 -05:00
@@ -80,6 +89,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 20:40:00.000000000 -05:00
 - :title: Star Trek Beyond
   :id: '188462'
+  :runtime: 122
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:00:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 12:25:00.000000000 -05:00
@@ -89,6 +99,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 21:25:00.000000000 -05:00
 - :title: Café Society
   :id: '192162'
+  :runtime: 96
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:35:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 14:10:00.000000000 -05:00
@@ -97,11 +108,13 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 21:45:00.000000000 -05:00
 - :title: Ghostbusters 3D
   :id: '140163'
+  :runtime: 
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 12:05:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 18:10:00.000000000 -05:00
 - :title: Ghostbusters (2016)
   :id: '140163'
+  :runtime: 107
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 13:20:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 16:20:00.000000000 -05:00
@@ -109,6 +122,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 22:05:00.000000000 -05:00
 - :title: 'Hillary''s America: The Secret History of the Democratic Party'
   :id: '193778'
+  :runtime: 107
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 12:50:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 15:40:00.000000000 -05:00
@@ -116,11 +130,13 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 21:35:00.000000000 -05:00
 - :title: The Infiltrator
   :id: '191461'
+  :runtime: 127
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 15:05:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 21:20:00.000000000 -05:00
 - :title: Captain Fantastic
   :id: '190420'
+  :runtime: 119
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 13:30:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 16:35:00.000000000 -05:00
@@ -128,6 +144,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 22:15:00.000000000 -05:00
 - :title: Mike & Dave Need Wedding Dates
   :id: '188459'
+  :runtime: 98
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 12:55:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 15:30:00.000000000 -05:00
@@ -135,6 +152,7 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 21:10:00.000000000 -05:00
 - :title: The Secret Life of Pets
   :id: '184804'
+  :runtime: 90
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:15:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 12:15:00.000000000 -05:00
@@ -146,11 +164,13 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 21:15:00.000000000 -05:00
 - :title: The BFG
   :id: '188457'
+  :runtime: 117
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 13:55:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 16:55:00.000000000 -05:00
 - :title: The Legend of Tarzan
   :id: '187791'
+  :runtime: 
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 12:45:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 15:35:00.000000000 -05:00
@@ -158,20 +178,24 @@
   - :datetime: !ruby/object:DateTime 2016-08-02 21:10:00.000000000 -05:00
 - :title: 'Independence Day: Resurgence'
   :id: '165895'
+  :runtime: 120
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 16:50:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 22:10:00.000000000 -05:00
 - :title: The Shallows
   :id: '185717'
+  :runtime: 87
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 21:50:00.000000000 -05:00
 - :title: Central Intelligence
   :id: '185755'
+  :runtime: 117
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 17:15:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 22:15:00.000000000 -05:00
 - :title: Finding Dory
   :id: '164333'
+  :runtime: 103
   :showtimes:
   - :datetime: !ruby/object:DateTime 2016-08-02 11:05:00.000000000 -05:00
   - :datetime: !ruby/object:DateTime 2016-08-02 13:40:00.000000000 -05:00
