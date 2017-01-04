@@ -1,6 +1,8 @@
 module Fandango
   module TheaterShowtimes
 
+    BASE_URL = 'http://www.fandango.com/theater_%{theater_id}/theaterpage?date=%{date}'
+
     module_function
 
     def call(showtimes_link)
@@ -9,6 +11,11 @@ module Fandango
 
       html = response.read
       Parser.(html)
+    end
+
+    def by_id_and_date(theater_id:, date: Date.today)
+      url = BASE_URL % {:theater_id => theater_id, :date => date}
+      call url
     end
 
     def request(showtimes_link)

@@ -48,6 +48,15 @@ movies_and_showtimes = Fandango.theater_showtimes(theaters_and_movies.first.fetc
 =end
 ```
 
+### `theaters_and_movies` with id and different date
+
+```ruby
+Fandango.theater_showtimes(
+  :theater_id => theaters_and_movies.first.fetch(:id),
+  :date => Date.tomorrow, # optional, defaults to `Date.today`
+)
+```
+
 ## Compatibility
 
 Development of this gem will only officially support Ruby versions 2.3.0. (see `.travis.yml`)
