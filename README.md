@@ -6,16 +6,17 @@ Uses Fandango's RSS moviesnearme feed. E.g. http://www.fandango.com/rss/moviesne
 
 ## Usage
 
-`Fandango.movies_near(73142)`
-
-```
+```ruby
+theaters_and_movies = Fandango.movies_near(73142)
+=begin
 [
     [ 0] {
         :theater => {
                    :name => "AMC",
                      :id => "abcde",
                 :address => "123 Baker St., New York, NY 10001",
-            :postal_code => "10001"
+            :postal_code => "10001",
+            :showtimes_link => "http://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123"
         },
          :movies => [
             [0] {
@@ -25,8 +26,26 @@ Uses Fandango's RSS moviesnearme feed. E.g. http://www.fandango.com/rss/moviesne
             # more movies...
         ]
     },
-    # more hashes...
+    # ...
 ]
+=end
+
+movies_and_showtimes = Fandango.theater_showtimes(theaters_and_movies.first.fetch(:showtimes_link))
+=begin
+[
+  {
+          :title => "Bad Moms",
+             :id => "191125",
+        :runtime => 101,
+      :showtimes => [
+          [0] {
+              :datetime => #<DateTime: 2016-08-02T11:30:00-05:00 ((2457603j,59400s,0n),-18000s,2299161j)>
+          },
+          # ...
+      ]
+  },
+  # ...
+=end
 ```
 
 ## Compatibility
