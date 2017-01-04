@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fandango (1.1.0)
+    fandango (2.0.0)
       nokogiri (~> 1.0)
 
 GEM
@@ -13,10 +13,8 @@ GEM
       safe_yaml (~> 1.0.0)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
-    nokogiri (1.6.8)
+    nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
-      pkg-config (~> 1.1.7)
-    pkg-config (1.1.7)
     rake (11.2.2)
     safe_yaml (1.0.4)
     vcr (3.0.3)
@@ -36,4 +34,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.11.2
+   1.13.1

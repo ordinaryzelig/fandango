@@ -11,19 +11,17 @@ theaters_and_movies = Fandango.movies_near(73142)
 =begin
 [
     [ 0] {
-        :theater => {
-                   :name => "AMC",
-                     :id => "abcde",
-                :address => "123 Baker St., New York, NY 10001",
-            :postal_code => "10001",
-            :showtimes_link => "http://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123"
-        },
-         :movies => [
-            [0] {
-                :title => "Sherlock Holmes",
-                   :id => "123456"
+                  :name => "AMC Quail Springs Mall 24",
+                    :id => "aaktw",
+               :address => "2501 West Memorial Oklahoma City, OK 73134",
+           :postal_code => "73134",
+        :showtimes_link => "http://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123",
+                :movies => [
+            [ 0] {
+                :title => "Abraham Lincoln: Vampire Hunter",
+                   :id => "141897"
             },
-            # more movies...
+            # ...
         ]
     },
     # ...
