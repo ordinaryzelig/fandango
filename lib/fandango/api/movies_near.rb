@@ -13,7 +13,7 @@ module Fandango
 
     def request(postal_code)
       cleaned_postal_code = postal_code.to_s.gsub(' ', '')
-      url_for_postal_code = "http://www.fandango.com/rss/moviesnearme_#{cleaned_postal_code}.rss"
+      url_for_postal_code = "https://www.fandango.com/rss/moviesnearme_#{cleaned_postal_code}.rss"
       open(url_for_postal_code)
     end
 

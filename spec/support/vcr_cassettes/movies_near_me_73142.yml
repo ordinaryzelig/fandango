@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.fandango.com/rss/moviesnearme_73142.rss
+    uri: https://www.fandango.com/rss/moviesnearme_73142.rss
     body:
       encoding: US-ASCII
       string: ''

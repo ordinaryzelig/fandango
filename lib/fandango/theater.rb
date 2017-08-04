@@ -29,7 +29,7 @@ module Fandango
       item_node.at_css('title').content.strip
     end
 
-    # E.g. 'aaicu' in http://www.fandango.com/northpark7_aaicu/theaterpage
+    # E.g. 'aaicu' in https://www.fandango.com/northpark7_aaicu/theaterpage
     def parse_id(item_node)
       item_node.
         at_css('link').

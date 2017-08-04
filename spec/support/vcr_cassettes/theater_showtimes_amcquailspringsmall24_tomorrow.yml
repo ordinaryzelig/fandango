@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.fandango.com/theater_aaktw/theaterpage?date=2017-01-05
+    uri: https://www.fandango.com/theater_aaktw/theaterpage?date=2017-01-05
     body:
       encoding: US-ASCII
       string: ''

@@ -2,7 +2,7 @@
 
 Fetch theaters near postal code and movies on sale at each.
 
-Uses Fandango's RSS moviesnearme feed. E.g. http://www.fandango.com/rss/moviesnearme_10023.rss
+Uses Fandango's RSS moviesnearme feed. E.g. https://www.fandango.com/rss/moviesnearme_10023.rss
 
 ## Usage
 
@@ -15,7 +15,7 @@ theaters_and_movies = Fandango.movies_near(73142)
                     :id => "aaktw",
                :address => "2501 West Memorial Oklahoma City, OK 73134",
            :postal_code => "73134",
-        :showtimes_link => "http://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123",
+        :showtimes_link => "https://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123",
                 :movies => [
             [ 0] {
                 :title => "Abraham Lincoln: Vampire Hunter",

@@ -1,7 +1,7 @@
 module Fandango
   module TheaterShowtimes
 
-    BASE_URL = 'http://www.fandango.com/theater_%{theater_id}/theaterpage?date=%{date}'
+    BASE_URL = 'https://www.fandango.com/theater_%{theater_id}/theaterpage?date=%{date}'
 
     module_function
 

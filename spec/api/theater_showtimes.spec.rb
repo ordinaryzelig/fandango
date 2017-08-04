@@ -9,7 +9,7 @@ module Fandango
 
     it 'requests and parses showtimes for given URL into Movies with Showtimes' do
       VCR.use_cassette 'theater_showtimes_amcquailspringsmall24' do
-        url = 'http://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123'
+        url = 'https://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123'
 
         movies = Fandango.theater_showtimes(url)
 

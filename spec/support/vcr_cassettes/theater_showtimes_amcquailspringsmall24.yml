@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssac=123&wssaffid=11836
+    uri: https://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssac=123&wssaffid=11836
     body:
       encoding: US-ASCII
       string: ''
