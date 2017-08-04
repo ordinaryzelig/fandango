@@ -7,20 +7,24 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.4.0)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
     awesome_print (1.7.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    mini_portile2 (2.1.0)
+    hashdiff (0.3.4)
+    mini_portile2 (2.2.0)
     minitest (5.9.0)
-    nokogiri (1.6.8.1)
-      mini_portile2 (~> 2.1.0)
-    rake (11.2.2)
+    nokogiri (1.8.0)
+      mini_portile2 (~> 2.2.0)
+    public_suffix (2.0.5)
+    rake (12.0.0)
     safe_yaml (1.0.4)
     vcr (3.0.3)
-    webmock (1.9.3)
-      addressable (>= 2.2.7)
+    webmock (3.0.1)
+      addressable (>= 2.3.6)
       crack (>= 0.3.2)
+      hashdiff
 
 PLATFORMS
   ruby
@@ -34,4 +38,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.13.1
+   1.15.3
