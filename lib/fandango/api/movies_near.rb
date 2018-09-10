@@ -5,16 +5,16 @@ module Fandango
 
     def call(postal_code)
       response = request(postal_code)
-      raise BadResponse.new(response) unless response.status.first == '200'
+      raise BadResponse.new(response) unless response.success?
 
-      xml = response.read
+      xml = response.body
       Parser.(xml)
     end
 
     def request(postal_code)
       cleaned_postal_code = postal_code.to_s.gsub(' ', '')
       url_for_postal_code = "https://www.fandango.com/rss/moviesnearme_#{cleaned_postal_code}.rss"
-      open(url_for_postal_code)
+      API.conn.get(url_for_postal_code)
     end
 
     module Parser

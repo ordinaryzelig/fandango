@@ -9,7 +9,7 @@ module Fandango
 
     it 'requests and parses showtimes for given URL into Movies with Showtimes' do
       VCR.use_cassette 'theater_showtimes_amcquailspringsmall24' do
-        url = 'https://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123'
+        url = 'http://www.fandango.com/amcquailspringsmall24_aaktw/theaterpage?wssaffid=11836&wssac=123'
 
         movies = Fandango.theater_showtimes(url)
 
@@ -18,19 +18,19 @@ module Fandango
       end
     end
 
-    it 'requests and parses showtimes for given theater id and date' do
-      VCR.use_cassette 'theater_showtimes_amcquailspringsmall24_tomorrow' do
-        tomorrow = Date.new(2017, 1, 5)
+    #it 'requests and parses showtimes for given theater id and date' do
+      #VCR.use_cassette 'theater_showtimes_amcquailspringsmall24_tomorrow' do
+        #tomorrow = Date.new(2017, 1, 5)
 
-        movies = Fandango.theater_showtimes(
-          :theater_id => 'aaktw',
-          :date       => tomorrow,
-        )
+        #movies = Fandango.theater_showtimes(
+          #:theater_id => 'aaktw',
+          #:date       => tomorrow,
+        #)
 
-        fixture_yaml = fixture_file_content('theater_showtimes_amcquailspringsmall24_tomorrow.yml')
-        movies.to_yaml.must_equal fixture_yaml
-      end
-    end
+        #fixture_yaml = fixture_file_content('theater_showtimes_amcquailspringsmall24_tomorrow.yml')
+        #movies.to_yaml.must_equal fixture_yaml
+      #end
+    #end
 
   end
 end

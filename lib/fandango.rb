@@ -1,7 +1,7 @@
 require "fandango/version"
 
-require 'open-uri'
 require 'nokogiri'
+require 'faraday'
 
 require 'fandango/api'
 

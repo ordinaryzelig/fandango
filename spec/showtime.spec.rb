@@ -7,7 +7,7 @@ module Fandango
     include FixtureHelpers
 
     specify '.parse parses node into Showtime' do
-      html = fixture_file_content('showtimes_amcquailspringsmall24_aaktw_2016_08_01.html')
+      json = fixture_file_content('showtimes_amcquailspringsmall24_aaktw_2018_07_14.json')
       node = Nokogiri.HTML(html).at_css('.showtimes-movie-container')
 
       showtime = Showtime.parse(node)

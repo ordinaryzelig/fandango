@@ -15,16 +15,16 @@ module Fandango
       end
     end
 
-    it 'raises error if status code is not 200' do
-      response = MiniTest::Mock.new
-      response.expect(:status, ['500', 'not ok'])
+    #it 'raises error if status code is not 200' do
+      #response = MiniTest::Mock.new
+      #response.expect(:status, ['500', 'not ok'])
 
-      MoviesNear.stub(:request, response) do
-        proc do
-          Fandango.movies_near('_')
-        end.must_raise(MoviesNear::BadResponse)
-      end
-    end
+      #MoviesNear.stub(:request, response) do
+        #proc do
+          #Fandango.movies_near('_')
+        #end.must_raise(MoviesNear::BadResponse)
+      #end
+    #end
 
   end
 end

@@ -1,13 +1,13 @@
 module Fandango
   module TheaterShowtimes
 
-    BASE_URL = 'https://www.fandango.com/theater_%{theater_id}/theaterpage?date=%{date}'
+    BASE_URL = 'https://www.fandango.com/napi/theaterMovieShowtimes/%{theater_id}?startDate=%{date}&isdesktop=true'
 
     module_function
 
     def call(showtimes_link)
       response = request(showtimes_link)
-      raise BadResponse.new(response) unless response.status.first == '200'
+      raise BadResponse.new(response) unless response.success?
 
       html = response.read
       Parser.(html)
@@ -19,7 +19,8 @@ module Fandango
     end
 
     def request(showtimes_link)
-      open(showtimes_link)
+      API.get_cookie
+      API.conn.get(showtimes_link)
     end
 
     module Parser

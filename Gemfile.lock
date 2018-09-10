@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     fandango (2.1.0)
+      faraday
       nokogiri (~> 1.0)
 
 GEM
@@ -12,11 +13,14 @@ GEM
     awesome_print (1.7.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    faraday (0.15.2)
+      multipart-post (>= 1.2, < 3)
     hashdiff (0.3.4)
-    mini_portile2 (2.2.0)
+    mini_portile2 (2.3.0)
     minitest (5.9.0)
-    nokogiri (1.8.0)
-      mini_portile2 (~> 2.2.0)
+    multipart-post (2.0.0)
+    nokogiri (1.8.4)
+      mini_portile2 (~> 2.3.0)
     public_suffix (2.0.5)
     rake (12.0.0)
     safe_yaml (1.0.4)
